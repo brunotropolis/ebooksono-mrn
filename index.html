@@ -3,126 +3,128 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>5-motivos-bebê-não-dorme-no-berço.pdf</title>
+<title>O que ninguém te contou sobre o sono do bebê no berço</title>
+<meta name="description" content="Conheça os 5 principais motivos que dificultam o sono do bebê no berço e o que fazer em cada um deles. Por Dayane Dos Anjos.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
-<meta name="theme-color" content="#323336">
+<meta name="theme-color" content="#14306b">
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="image" href="assets/capa.webp" fetchpriority="high">
+<link rel="preload" as="image" href="assets/capa-segura.webp" fetchpriority="high">
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;0,800;1,600&family=Nunito:wght@400;600;700;800&family=Lora:ital@1&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;0,800;1,600&family=Nunito:wght@400;600;700;800&family=Lora:ital@1&display=swap"></noscript>
+<!-- Meta Pixel (o mesmo do Dream Baby Pocket: 2199334337151314 navegador+CAPI, 2103631056813206 navegador) -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+(function(){
+  /* grava _fbp/_fbc antes do 1o evento (senão o CAPI chega sem fbp) */
+  function gc(n){var m=document.cookie.match('(^|; )'+n+'=([^;]+)');return m?decodeURIComponent(m[2]):'';}
+  function sc(n,v){try{document.cookie=n+'='+v+'; path=/; max-age=7776000; domain=.manualdorecemnascido.com.br; SameSite=Lax';}catch(e){}}
+  if(!gc('_fbp')){sc('_fbp','fb.1.'+Date.now()+'.'+Math.floor(1e9+Math.random()*9e9));}
+  if(!gc('_fbc')){try{var fbclid=new URLSearchParams(location.search).get('fbclid');if(fbclid){sc('_fbc','fb.1.'+Date.now()+'.'+fbclid);}}catch(e){}}
+})();
+fbq('init', '2199334337151314');
+fbq('init', '2103631056813206');
+(function(){
+  var CAPI='https://n8n-n8n.xktssy.easypanel.host/webhook/perfis-capi';
+  function gc(n){var m=document.cookie.match('(^|; )'+n+'=([^;]+)');return m?decodeURIComponent(m[2]):'';}
+  function eid(){return Date.now().toString(36)+'-'+Math.random().toString(36).slice(2,10);}
+  var BOT=navigator.webdriver===true||/bot|crawl|spider|slurp|facebookexternalhit|facebookcatalog|whatsapp|telegram|preview|headless|lighthouse|pagespeed/i.test(navigator.userAgent||'');
+  window.trackMeta=function(ev,cd){
+    var id=eid();
+    try{ if(window.fbq) fbq('track',ev,cd||{},{eventID:id}); }catch(e){}
+    if(BOT) return;
+    try{
+      var p={event_name:ev,event_id:id,event_time:Math.floor(Date.now()/1000),event_source_url:location.href,fbp:gc('_fbp'),fbc:gc('_fbc'),user_agent:navigator.userAgent,custom_data:cd||{}};
+      var blob=new Blob([JSON.stringify(p)],{type:'text/plain'});
+      if(navigator.sendBeacon) navigator.sendBeacon(CAPI,blob);
+      else fetch(CAPI,{method:'POST',mode:'no-cors',keepalive:true,headers:{'Content-Type':'text/plain'},body:JSON.stringify(p)});
+    }catch(e){}
+  };
+  trackMeta('PageView');
+  trackMeta('ViewContent', {content_name:'ebook-sono', content_category:'pocket-ebook', value:67.0, currency:'BRL'});
+})();
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2199334337151314&ev=PageView&noscript=1"/></noscript>
 <style>
 :root{
-  --backdrop1:#3c3d40; --backdrop2:#28292b;
+  --bg:#e4e9f4;
   --sheet:#fdfcfa;
-  --ink:#252a40; --muted:#7c8299;
+  --ink:#252a40; --muted:#6f7590;
   --night:#2c4a8c; --night-deep:#1b2f5e;
-  --gold:#c98f2e;
-  --cream:#edf1fa; --line:#e1e6f1;
-  --radius:5px;
-  --maxw:820px;
+  --gold:#a8741c;
+  --line:#e1e6f1;
+  --radius:14px;
+  --maxw:760px;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
-  margin:0; color:var(--ink);
+  margin:0; color:var(--ink); background:var(--bg);
   font-family:"Nunito",system-ui,sans-serif; font-size:18px; line-height:1.62;
-  background:
-    radial-gradient(1200px 600px at 50% -12%, #4b4c4f 0%, transparent 58%),
-    linear-gradient(180deg,var(--backdrop1),var(--backdrop2));
-  background-attachment:fixed;
   -webkit-text-size-adjust:100%;
 }
-
-/* ---------- barra tipo leitor de PDF ---------- */
-.bar{
-  position:sticky; top:0; z-index:50;
-  display:flex; align-items:center; justify-content:space-between; gap:12px;
-  padding:8px clamp(12px,4vw,22px);
-  background:#323336; color:#e8e8ea;
-  border-bottom:1px solid #1e1f21; box-shadow:0 2px 8px rgba(0,0,0,.35);
-}
-.bar .doc{display:flex; align-items:center; gap:9px; min-width:0}
-.bar .doc .pdf{display:inline-flex; align-items:center; font-size:9.5px; font-weight:800; letter-spacing:.6px; color:#fff; background:#e0483d; padding:3px 6px; border-radius:4px; flex:0 0 auto}
-.bar .doc .fname{font-size:13px; font-weight:600; color:#e8e8ea; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
-.bar .tools{display:flex; align-items:center; gap:clamp(8px,3vw,16px); flex:0 0 auto}
-.bar .zoom{display:flex; align-items:center; gap:2px}
-.bar .zoom button{width:26px; height:26px; border:0; background:transparent; color:#c7c7ca; font-size:17px; border-radius:6px; cursor:pointer; line-height:1; display:flex; align-items:center; justify-content:center}
-.bar .zoom button:hover{background:#48494c; color:#fff}
-.bar .pg{display:inline-flex; align-items:center; gap:7px; font-size:12.5px; color:#c7c7ca; font-weight:600; white-space:nowrap; font-variant-numeric:tabular-nums}
-.bar .pg .box{background:#26272a; border:1px solid #46474a; border-radius:5px; padding:2px 8px; color:#fff}
-.progress{position:sticky; top:42px; z-index:49; height:3px; background:transparent}
+.progress{position:fixed; top:0; left:0; right:0; z-index:50; height:3px}
 .progress > i{display:block; height:100%; width:0; background:linear-gradient(90deg,var(--night),#7d9ee0); transition:width .12s linear}
 
-/* ---------- folhas ---------- */
-.viewer{padding:22px clamp(10px,3vw,26px) 60px}
+/* ---------- blocos verticais ---------- */
+.viewer{padding:16px clamp(10px,3vw,26px) 48px}
 .page{
   position:relative;
-  display:flex; flex-direction:column; justify-content:center;
-  max-width:var(--maxw); margin:0 auto 26px;
+  max-width:var(--maxw); margin:0 auto 18px;
   background-color:var(--sheet);
   background-image:url("assets/lua.svg");
-  background-repeat:no-repeat; background-position:right -4px top -4px; background-size:140px;
+  background-repeat:no-repeat; background-position:right -4px top -4px; background-size:130px;
   border-radius:var(--radius);
-  box-shadow:0 1px 0 rgba(0,0,0,.04), 0 18px 40px -22px rgba(30,45,90,.45);
-  padding:clamp(30px,6vw,68px) clamp(24px,6vw,72px) clamp(56px,7vw,80px);
-  min-height:1080px;
+  box-shadow:0 1px 0 rgba(0,0,0,.03), 0 18px 40px -26px rgba(30,45,90,.45);
+  padding:clamp(30px,6vw,60px) clamp(22px,6vw,64px);
 }
 .page.t-sky{--sheet:#eef3fb}
 .page.t-cream{--sheet:#fbf6ec}
 .page.t-lilac{--sheet:#f2effa}
-.page.t-mist{--sheet:#f1f3f7}
-.page::after{
-  content:""; position:absolute; left:0; right:0; bottom:0; height:4px;
-  background:linear-gradient(180deg,transparent,rgba(40,60,110,.05));
-  border-radius:0 0 var(--radius) var(--radius);
-}
-.pnum{
-  position:absolute; left:0; right:0; bottom:26px; text-align:center;
-  font-size:12.5px; letter-spacing:.14em; color:#a9b0c3; font-weight:700;
-}
-.pnum::before,.pnum::after{content:"·"; margin:0 8px; color:#c9cfdd}
+.page.t-mist{--sheet:#f4f6fa}
 
 .kicker{
-  display:inline-block; align-self:flex-start; font-size:12px; font-weight:800; letter-spacing:.16em; text-transform:uppercase;
-  color:var(--night); background:#fff; border:1px solid var(--line); padding:6px 12px; border-radius:999px; margin-bottom:18px;
+  display:inline-block; font-size:12px; font-weight:800; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--night); background:#fff; border:1px solid var(--line); padding:6px 12px; border-radius:999px; margin-bottom:16px;
 }
-h1,h2,h3{font-family:"Poppins",sans-serif; font-weight:600; line-height:1.16; color:var(--ink); letter-spacing:.2px}
-h2.title{font-size:clamp(26px,5.4vw,38px); margin:0 0 22px; text-wrap:balance}
+h1,h2,h3{font-family:"Poppins",sans-serif; font-weight:600; line-height:1.18; color:var(--ink); letter-spacing:.2px}
+/* todos os títulos de bloco no mesmo tamanho */
+h2.title{font-size:clamp(25px,5.2vw,34px); margin:0 0 20px; text-wrap:balance}
 h2.title .em{color:var(--night); font-style:italic}
-p{margin:0 0 18px}
+h3.sub{font-size:clamp(20px,4.2vw,24px); margin:30px 0 14px; color:var(--night-deep)}
+p{margin:0 0 19px}
 strong{color:var(--night-deep)}
 .lead{font-size:1.06em}
-
-/* número grande do motivo */
-.num{font-family:"Poppins",sans-serif; font-weight:800; font-size:clamp(64px,14vw,96px); line-height:.9; color:var(--night); opacity:.18; margin:0 0 -6px; letter-spacing:-2px}
+.num{font-family:"Poppins",sans-serif; font-weight:800; font-size:clamp(56px,13vw,84px); line-height:.9; color:var(--night); opacity:.3; margin:0 0 -4px; letter-spacing:-2px}
 
 .note{
   border-left:4px solid var(--gold); background:#fff;
-  padding:16px 20px; border-radius:0 12px 12px 0; margin:24px 0; font-size:.98em;
+  padding:16px 22px; border-radius:0 12px 12px 0; margin:24px 0; font-size:.98em;
   box-shadow:0 6px 18px -12px rgba(30,45,90,.35);
 }
 .note b{color:var(--gold)}
-
-/* frase de impacto (como no PDF) */
 .quote{
   background:linear-gradient(160deg,#16295a,#0a1430); color:#fff; border-radius:18px;
-  padding:clamp(26px,5vw,40px) clamp(22px,5vw,36px); margin:26px 0; text-align:center;
-  font-family:"Poppins",sans-serif; font-weight:800; font-size:clamp(20px,4.6vw,28px); line-height:1.25; letter-spacing:.2px; text-transform:uppercase;
+  padding:clamp(30px,6vw,40px) clamp(22px,5vw,36px); margin:26px 0; text-align:center;
+  font-family:"Poppins",sans-serif; font-weight:800; font-size:clamp(19px,4.4vw,26px); line-height:1.25; text-transform:uppercase;
   box-shadow:0 18px 40px -20px rgba(10,20,48,.8);
 }
 .quote em{font-style:normal; color:#f3d79b}
 
-/* mídia */
-.media{margin:26px 0}
+.media{margin:22px 0}
 .frame{position:relative; width:100%; border-radius:14px; overflow:hidden; box-shadow:0 14px 34px -18px rgba(20,35,80,.6); background:#0a1430}
 .frame img{display:block; width:100%; height:auto}
 .frame.wide{aspect-ratio:4/3}
 .frame.wide img{height:100%; object-fit:cover}
 .frame.wide img.top{object-position:center 22%}
+.frame.wide img.mid{object-position:center 45%}
 
-/* CTA */
+/* botões */
 .buy{
   display:flex; align-items:center; justify-content:center; gap:8px; text-align:center; text-decoration:none;
   background:linear-gradient(135deg,#16a34a,#12833c); color:#fff; font-weight:800; font-family:"Nunito"; letter-spacing:1.2px;
@@ -131,97 +133,109 @@ strong{color:var(--night-deep)}
   animation:pulseUp 1.9s ease-in-out infinite;
 }
 .buy:hover{animation:none; transform:translateY(-3px); box-shadow:0 20px 34px -12px rgba(12,107,48,.9)}
-.buy.big{font-size:1.24em; padding:20px 26px}
+.buy.big{font-size:1.2em; padding:20px 26px}
 @keyframes pulseUp{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
 @media (prefers-reduced-motion:reduce){.buy{animation:none}}
-.cta-soft{background:#fff; border:1px solid var(--line); border-radius:16px; padding:22px; margin:28px 0 0; text-align:center}
-.cta-soft p{margin:0 0 4px; font-weight:700}
 
-/* método (card navy, mesmo estilo da oferta do ebook de amamentação) */
-.method{max-width:480px; margin:26px auto 0; background:#0f1c3f; border-radius:18px; padding:30px 24px; text-align:center; box-shadow:0 18px 44px rgba(15,28,63,.32)}
-.method .mtag{display:inline-block; font-size:11.5px; font-weight:800; letter-spacing:.16em; text-transform:uppercase; color:#aab6d6; margin-bottom:6px}
-.method .pname{font-family:"Poppins",sans-serif; font-weight:800; font-size:clamp(30px,8vw,40px); color:#fff; line-height:1.05; margin-bottom:8px; letter-spacing:.5px}
-.method .cond{font-family:"Lora",Georgia,serif; font-style:italic; color:#aab6d6; font-size:1.04em; line-height:1.45; margin-bottom:20px}
-.method .perks{list-style:none; padding:0; margin:20px auto 0; width:fit-content; text-align:left}
-.method .perks li{display:flex; align-items:center; gap:10px; color:#e6ebf5; font-weight:600; margin:10px 0}
-.method .perks li::before{content:"✓"; color:#3ee07f; font-weight:800}
+.checks{list-style:none; padding:0; margin:18px 0}
+.checks li{position:relative; padding:0 0 0 34px; margin-bottom:12px; line-height:1.4}
+.checks li::before{content:"✓"; position:absolute; left:0; top:1px; width:24px; height:24px; border-radius:50%; background:#16a34a; color:#fff; font-weight:800; font-size:14px; display:flex; align-items:center; justify-content:center}
+.recebe{background:#fff; border:1px solid var(--line); border-radius:16px; padding:22px 22px 8px; margin:22px 0}
+.recebe h3{margin:0 0 12px; font-size:1.12em}
+.recebe li b{color:var(--night-deep)}
+
+/* oferta (mesmo estilo do ebook de amamentação) */
+.offer{max-width:462px; margin:26px auto 0}
+.buy-card{background:#0f1c3f; border-radius:18px; padding:30px 24px; text-align:center; box-shadow:0 18px 44px rgba(15,28,63,.32)}
+.buy-card .pname{font-family:"Poppins",sans-serif; font-weight:800; font-size:1.5em; color:#fff; margin-bottom:4px}
+.buy-card .cond{font-family:"Lora",Georgia,serif; font-style:italic; color:#aab6d6; font-size:1.02em; line-height:1.4; margin-bottom:16px}
+.buy-card .price{font-family:"Poppins",sans-serif; font-weight:800; color:#fff; font-size:clamp(3rem,13vw,4.2rem); line-height:1; margin:8px 0 0}
+.buy-card .cash{color:#dfe5f3; font-size:1.02em; font-weight:600; margin:12px 0 20px}
+.buy-card .perks{list-style:none; padding:0; margin:22px auto 0; width:fit-content; text-align:left}
+.buy-card .perks li{display:flex; align-items:center; gap:10px; color:#e6ebf5; font-weight:600; margin:11px 0}
+.buy-card .perks li::before{content:"✓"; color:#3ee07f; font-weight:800}
+.bump{max-width:462px; margin:20px auto 0; background:#0f5132; border:1px solid #0a3d25; border-radius:16px; padding:26px 22px; text-align:center; box-shadow:0 14px 34px rgba(15,81,50,.3)}
+.bump .tag{display:inline-flex; align-items:center; gap:7px; font-weight:800; font-size:.72em; letter-spacing:.08em; text-transform:uppercase; color:#0f5132; background:#fff; padding:6px 13px; border-radius:8px; margin-bottom:12px}
+.bump .tag .wa{width:15px; height:15px; color:#25d366; display:inline-flex}
+.bump .cname{font-family:"Poppins",sans-serif; font-weight:800; color:#fff; font-size:1.3em; margin-bottom:8px}
+.bump .cdesc{color:#d7ebdf; font-size:.95em; line-height:1.5; margin-bottom:16px}
+.bump-price{background:#0f1c3f; border-radius:12px; padding:15px 14px 14px; margin:0 auto 18px; max-width:360px}
+.bump-price .l1{display:block; font-weight:800; font-size:.72em; letter-spacing:.08em; text-transform:uppercase; color:#aab6d6}
+.bump-price .l2{display:block; font-family:"Poppins",sans-serif; font-weight:800; color:#fff; font-size:2.5em; line-height:1.05; margin:2px 0}
+.bump-price .l3{display:block; color:#aab6d6; font-size:.88em}
+.reassure{display:flex; flex-direction:column; gap:8px; margin:16px auto 0; width:fit-content; max-width:100%}
+.reassure span{display:flex; align-items:center; gap:9px; font-size:13px; font-weight:700; background:#fff; border:1px solid var(--line); border-radius:11px; padding:10px 15px}
 
 /* Day */
-.author{display:block; text-align:center; margin:4px 0 22px}
-.author .day-photo{width:172px; height:172px; border-radius:50%; object-fit:cover; box-shadow:0 18px 36px -14px rgba(27,47,94,.75); border:4px solid #fff; margin:0 auto 14px; display:block}
-.author .day-desc{font-size:1.06em; margin:0 auto 6px; max-width:36ch}
-.sign-off{font-family:"Lora",Georgia,serif; font-style:italic; font-size:1.1em; margin-top:8px}
-.sign-off b{display:block; font-family:"Poppins",sans-serif; font-style:normal; font-weight:700; color:var(--night-deep); font-size:1.05em}
-.socials{display:flex; gap:10px; flex-wrap:wrap; justify-content:center; margin-top:22px}
+.author{text-align:center; margin:4px 0 22px}
+.author .day-photo{width:172px; height:172px; border-radius:50%; object-fit:cover; object-position:center 30%; box-shadow:0 18px 36px -14px rgba(27,47,94,.75); border:4px solid #fff; margin:0 auto 14px; display:block}
+.stats{display:flex; gap:10px; flex-wrap:wrap; justify-content:center; margin-top:8px}
+.stats .s{background:#fff; border:1px solid var(--line); border-radius:14px; padding:12px 10px; text-align:center; flex:1 1 130px; min-width:118px}
+.stats .s .ic{display:inline-flex; margin-bottom:5px}
+.stats .s .ic svg{width:22px; height:22px}
+.stats .s .ic-alunas{color:#2c4a8c}.stats .s .ic-yt{color:#ff0000}.stats .s .ic-ig{color:#e1306c}.stats .s .ic-tk{color:#111}
+.stats .s b{display:block; font-family:"Poppins",sans-serif; font-size:1.32em; color:var(--night-deep)}
+.stats .s .lbl{font-size:12px; color:var(--muted); font-weight:700}
+
+/* FAQ */
+details.faq{border:1px solid var(--line); border-radius:12px; margin:12px 0; background:#fff; overflow:hidden}
+details.faq summary{list-style:none; cursor:pointer; padding:16px 46px 16px 20px; font-family:"Poppins",sans-serif; font-weight:600; font-size:1.02em; position:relative}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary::after{content:"+"; position:absolute; right:18px; top:50%; transform:translateY(-50%); font-size:22px; color:var(--night); transition:transform .2s}
+details.faq[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+details.faq .a{padding:0 20px 18px}
+details.faq .a p{margin:0}
+
+.sign-off{font-family:"Lora",Georgia,serif; font-style:italic; font-size:1.1em; margin-top:24px; text-align:center}
+.sign-off b{display:block; font-family:"Poppins",sans-serif; font-style:normal; font-weight:700; color:var(--night-deep)}
+.socials{display:flex; gap:10px; flex-wrap:wrap; justify-content:center; margin-top:18px}
 .socials a{display:inline-flex; align-items:center; gap:8px; text-decoration:none; color:var(--ink); font-weight:700; font-size:14px; background:#fff; border:1px solid var(--line); border-radius:999px; padding:9px 15px}
 .socials svg{width:19px; height:19px}
 .socials .ig{color:#e1306c}.socials .yt{color:#ff0000}.socials .tk{color:#111}
 
-/* ---------- CAPA (noite, como o PDF) ---------- */
-.cover{background:linear-gradient(180deg,#14306b 0%,#0b1838 60%,#050a18 100%); color:#fff; display:flex; flex-direction:column; padding:0; overflow:hidden}
-.cover .inner{flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:clamp(38px,7vw,70px) clamp(24px,7vw,58px); position:relative; z-index:2}
-.cov-orn{position:absolute; inset:0; width:100%; height:100%; z-index:1; pointer-events:none}
-.cov-kick{font-size:12px; font-weight:800; letter-spacing:.2em; text-transform:uppercase; color:#aab6d6; margin-bottom:14px}
-.cov-title{margin:0; line-height:1.14; text-align:center; text-wrap:balance}
-.cov-title span{display:block; font-weight:800; letter-spacing:-.3px}
-.cov-title .t1{font-size:clamp(26px,6.6vw,40px); color:#fff}
-.cov-title .t2{font-size:clamp(30px,7.8vw,48px); color:#f3d79b; margin-top:4px}
-.cover .tag{max-width:30ch; margin:18px auto 0; font-size:1.04em; opacity:.94; line-height:1.5}
-.cover .tag b{display:block; font-family:"Poppins",sans-serif; font-weight:700; letter-spacing:.08em; text-transform:uppercase; font-size:.92em; color:#fff}
-.cov-photo{margin:24px auto 2px; width:min(320px,80%); aspect-ratio:1/1; border-radius:50%; overflow:hidden; box-shadow:0 0 0 8px rgba(255,255,255,.08), 0 26px 50px -18px rgba(0,0,0,.7)}
-.cov-photo img{width:100%; height:100%; object-fit:cover; display:block}
-.cover .who{margin-top:24px; display:inline-flex; align-items:center; gap:12px; background:rgba(255,255,255,.12); padding:9px 18px 9px 9px; border-radius:999px}
+/* ---------- CAPA ---------- */
+.cover{background:linear-gradient(180deg,#14306b 0%,#0b1838 62%,#050a18 100%); color:#fff; overflow:hidden; text-align:center; padding:clamp(40px,7vw,64px) clamp(22px,7vw,56px)}
+.cov-orn{position:absolute; inset:0; width:100%; height:100%; pointer-events:none}
+.cover .inner{position:relative; z-index:2}
+.cov-title{margin:0 auto; max-width:16ch; font-weight:800; font-size:clamp(30px,7.6vw,46px); line-height:1.15; letter-spacing:-.3px; color:#fff; text-wrap:balance}
+.cov-title .gold{color:#f3d79b}
+.cov-photo{margin:26px auto 0; width:min(400px,92%); aspect-ratio:4/3; border-radius:22px; overflow:hidden; box-shadow:0 0 0 6px rgba(255,255,255,.08), 0 26px 50px -18px rgba(0,0,0,.7)}
+.cov-photo img{width:100%; height:100%; object-fit:cover; object-position:center 40%; display:block}
+.cover .tag{margin:20px auto 0; font-size:clamp(15px,3.9vw,18px); font-weight:700; line-height:1.4; color:#e6ebf5}
+.cover .who{margin-top:22px; display:inline-flex; align-items:center; gap:12px; background:rgba(255,255,255,.12); padding:9px 18px 9px 9px; border-radius:999px}
 .cover .who img{width:44px; height:44px; border-radius:50%; object-fit:cover; border:2px solid rgba(255,255,255,.6)}
-.cover .who span{font-size:14px; text-align:left; line-height:1.25}
+.cover .who span{font-size:15px; text-align:left; line-height:1.25}
 .cover .who b{font-family:"Poppins",sans-serif; font-weight:600; display:block}
 
 @media (max-width:640px){
   body{font-size:16.5px}
-  .page{min-height:86vh; padding:34px 22px 60px}
-  .cover{min-height:92vh}
+  .page{padding:32px 20px 36px}
 }
-@media print{.bar,.progress{display:none}}
 </style>
 </head>
 <body>
 
-<!-- LINK do método: constante METODO no <script> no fim do arquivo -->
-<div class="bar">
-  <div class="doc"><span class="pdf">PDF</span><span class="fname">5-motivos-bebe-nao-dorme-no-berco.pdf</span></div>
-  <div class="tools">
-    <div class="zoom"><button id="zout" title="Diminuir zoom">−</button><button id="zin" title="Aumentar zoom">+</button></div>
-    <span class="pg">Página <span class="box"><b id="curpg">1</b> / 10</span></span>
-  </div>
-</div>
 <div class="progress"><i id="bar"></i></div>
 
 <main class="viewer">
 
   <!-- ============ CAPA ============ -->
-  <article class="page cover" data-pg="1">
+  <article class="page cover" data-bloco="capa">
     <svg class="cov-orn" viewBox="0 0 420 760" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
       <circle cx="368" cy="66" r="132" fill="#fff" opacity="0.04"/>
-      <circle cx="36" cy="704" r="150" fill="#fff" opacity="0.03"/>
       <path d="M372 24a24 24 0 1 0 18 38 20 20 0 1 1-18-38z" fill="#f3d79b" opacity="0.45"/>
       <g fill="#fff">
         <circle cx="60" cy="60" r="1.8" opacity="0.6"/><circle cx="120" cy="34" r="1.2" opacity="0.5"/>
         <circle cx="210" cy="78" r="1.4" opacity="0.45"/><circle cx="290" cy="40" r="1.1" opacity="0.5"/>
         <circle cx="34" cy="180" r="1.3" opacity="0.45"/><circle cx="392" cy="250" r="1.6" opacity="0.5"/>
-        <circle cx="70" cy="420" r="1.2" opacity="0.4"/><circle cx="380" cy="470" r="1.3" opacity="0.4"/>
         <circle cx="30" cy="560" r="1.6" opacity="0.4"/><circle cx="400" cy="640" r="1.2" opacity="0.4"/>
         <path d="M88 120l2.6 6 6 2.6-6 2.6-2.6 6-2.6-6-6-2.6 6-2.6z" opacity="0.55"/>
-        <path d="M330 330l2 4.6 4.6 2-4.6 2-2 4.6-2-4.6-4.6-2 4.6-2z" opacity="0.45"/>
       </g>
-      <path d="M0 694 C120 652 300 732 420 682 L420 760 L0 760 Z" fill="#fff" opacity="0.04"/>
     </svg>
     <div class="inner">
-      <div class="cov-kick">E-book gratuito</div>
-      <h1 class="cov-title">
-        <span class="t1">O que ninguém te contou sobre</span>
-        <span class="t2">o sono do bebê no berço</span>
-      </h1>
-      <p class="tag"><b>Conheça os 5 principais motivos</b>(e o que fazer em cada um deles)</p>
-      <div class="cov-photo"><img src="assets/capa.webp" alt="Bebê dormindo no berço" width="320" height="320" fetchpriority="high" decoding="async"></div>
+      <h1 class="cov-title">O que ninguém te contou sobre <span class="gold">o sono do bebê no berço</span></h1>
+      <div class="cov-photo"><img src="assets/capa-segura.webp" alt="Bebê dormindo de barriga para cima" width="400" height="300" fetchpriority="high" decoding="async"></div>
+      <p class="tag">Conheça os 5 principais motivos e o que fazer em cada um deles</p>
       <div class="who">
         <img src="https://bio.manualdorecemnascido.com.br/assets/day/profile.jpg" alt="Dayane Dos Anjos">
         <span><b>Por Dayane Dos Anjos</b>Consultora de sono</span>
@@ -229,179 +243,339 @@ strong{color:var(--night-deep)}
     </div>
   </article>
 
-  <!-- ============ BOAS-VINDAS + INTRODUÇÃO ============ -->
-  <article class="page t-sky" data-pg="2">
-    <span class="kicker">Boas-vindas</span>
-    <h2 class="title">Oi, <span class="em">tudo bem?</span></h2>
-    <div class="media" style="margin-top:0"><div class="frame wide"><img class="top" src="assets/day-quarto.webp" alt="Dayane Dos Anjos" loading="lazy"></div></div>
-    <p class="lead">Me chamo Dayane Dos Anjos. Sou mãe, consultora de sono, amamentação e cuidados com o bebê.</p>
+  <!-- ============ BLOCO 1: ABERTURA ============ -->
+  <article class="page t-sky" data-bloco="1-abertura">
+    <p class="lead">Se o seu bebê só dorme no colo, briga contra o sono ou tem muitos despertares durante a noite, ele está precisando de ajuda para encontrar o caminho do sono. E isso não é falta de jeito sua.</p>
     <p>Seja muito bem-vinda a este e-book, criado com muito carinho para te ajudar a entender por que o seu bebê não está dormindo bem no berço e, principalmente, <strong>como mudar isso de forma gentil e eficaz.</strong></p>
-    <div class="note"><b>Introdução.</b> Depois de acompanhar milhares de famílias, percebi que existem 5 motivos principais que dificultam o sono do bebê no berço. Esse material foi criado para te ajudar a identificar se algum desses está acontecendo por aí, e o que você pode fazer para melhorar.</div>
+    <p>Depois de acompanhar milhares de famílias, percebi que existem 5 motivos principais que dificultam o sono do bebê no berço. Esse material foi criado para te ajudar a identificar se algum desses está acontecendo por aí, e o que você pode fazer para melhorar.</p>
     <p><em>Vamos começar? ↓</em></p>
-    <div class="pnum">2</div>
   </article>
 
-  <!-- ============ MOTIVO 1 ============ -->
-  <article class="page t-cream" data-pg="3">
+  <!-- ============ BLOCO 2: MOTIVO 1 ============ -->
+  <article class="page t-cream" data-bloco="2-motivo1">
     <div class="num">01</div>
     <span class="kicker">Motivo 1</span>
     <h2 class="title">Idade <span class="em">do bebê</span></h2>
-    <p class="lead">Muita gente acredita que, com o tempo, o bebê vai começar a dormir melhor sozinho. Mas a verdade é que <strong>o sono do bebê é uma habilidade que se aprende.</strong></p>
-    <div class="media"><div class="frame wide"><img class="top" src="assets/motivo1.webp" alt="Bebê de touca olhando para a câmera" loading="lazy"></div></div>
-    <p>O bebê aprende a dormir no berço quando a família ensina. Não depende de sorte, idade ou acaso. Quando ele aprende a adormecer e a voltar a dormir sozinho, sem precisar de ajuda a cada despertar, <strong>a rotina muda completamente.</strong></p>
-    <div class="pnum">3</div>
+    <p class="lead">Muita gente acredita que, com o tempo, o bebê vai começar a dormir melhor sozinho. Mas a verdade é que <strong>o sono é uma habilidade que se aprende.</strong> Todos nós, para adormecer, precisamos relaxar para encontrar o caminho do sono. Com o bebê não é diferente.</p>
+    <div class="media"><div class="frame wide"><img class="top" src="assets/motivo1.webp" alt="Bebê deitado de barriga para cima" loading="lazy"></div></div>
+    <p>O bebê aprende a dormir no berço quando a família ensina. Não depende de sorte, idade ou acaso. Quando ele aprende o caminho do sono, consegue emendar os ciclos de sono sozinho, de maneira natural, sem precisar da ajuda de um adulto a cada despertar. <strong>Isso transforma completamente a qualidade do sono do bebê e, por consequência, da família toda.</strong></p>
   </article>
 
-  <!-- ============ MOTIVO 2 ============ -->
-  <article class="page t-lilac" data-pg="4">
+  <!-- ============ BLOCO 3: PRECISO ESPERAR? ============ -->
+  <article class="page t-lilac" data-bloco="3-esperar">
+    <h2 class="title">Preciso esperar meu bebê crescer para ensinar <span class="em">autonomia de sono?</span></h2>
+    <p>Você já deve ter ouvido falar que é preciso esperar o bebê completar 4, 5 ou 6 meses para ensinar autonomia de sono, que não é possível ensinar antes disso.</p>
+    <p>Isso acontece porque, para essas pessoas, o único caminho para ensinar o bebê a dormir no berço é deixá-lo chorando.</p>
+    <p>Elas acreditam que, a partir de certa idade, o bebê não precisa mais mamar à noite e que, se ele chora, é por manha, não porque precisa de alguma coisa. Então, para resolver, basta deixá-lo chorando até que pare.</p>
+    <div class="media"><div class="frame wide"><img class="top" src="assets/motivo4.webp" alt="Mãe com o bebê no colo no quarto" loading="lazy"></div></div>
+    <p><strong>Esse não é o caminho em que eu acredito e que eu ensino.</strong></p>
+    <p>Eu gosto de mostrar para as famílias como conduzir o bebê para a autonomia de sono, sem deixá-lo chorando, mas com presença e de forma suave.</p>
+  </article>
+
+  <!-- ============ BLOCO 4: DESDE RECÉM-NASCIDO ============ -->
+  <article class="page t-sky" data-bloco="4-recem-nascido">
+    <h2 class="title">O bebê é capaz de aprender <span class="em">desde recém-nascido</span></h2>
+    <p class="lead">Mesmo dormindo tranquilamente no colo dos pais, o bebê pode aprender a dormir no berço.</p>
+    <p>Existe um passo a passo para isso, de forma gradual. O bebê vai aprendendo a dormir sem o contato físico dos pais, aos poucos, com muita presença e acolhimento. É tão suave que ele nem percebe que está passando por esse processo.</p>
+    <div class="media"><div class="frame wide"><img class="mid" src="assets/metodo.webp" alt="Bebê dormindo de barriga para cima no berço" loading="lazy"></div></div>
+    <p>Isso não significa que vai levar meses para aprender. Dependendo do ponto em que você está e das dificuldades que seu bebê tem para dormir, são necessários pouquíssimos dias para implementar e começar a ver resultados.</p>
+    <p>É por isso que eu digo que <strong>um bebê, desde recém-nascido, pode dormir bem no berço.</strong></p>
+    <p>Afinal, até poucos dias antes de nascer, o bebê já adormecia e emendava os ciclos de sono sozinho, ainda na barriga. Essa é uma habilidade que já vem com ele.</p>
+    <p>A gente só precisa manter essa habilidade e adaptar o bebê ao berço. E, caso ele já esteja maior e tenha desaprendido, é possível retomar esse caminho de forma gradual e gentil.</p>
+  </article>
+
+  <!-- ============ BLOCO 5: MOTIVO 2 ============ -->
+  <article class="page t-cream" data-bloco="5-motivo2">
     <div class="num">02</div>
     <span class="kicker">Motivo 2</span>
     <h2 class="title">Bebê briga <span class="em">contra o sono</span></h2>
-    <p class="lead">Sabe aquele momento em que o bebê está claramente exausto, mas parece resistir ao sono?</p>
-    <p>Ele chora, se irrita, e nada parece funcionar. Não é birra nem vontade de ficar acordado. <strong>É apenas cansaço acumulado.</strong></p>
-    <div class="media"><div class="frame wide"><img class="top" src="assets/motivo2.webp" alt="Mãe segurando o bebê chorando" loading="lazy"></div></div>
+    <p class="lead">Sabe aquele momento em que o bebê está claramente exausto, mas parece resistir ao sono? Ele chora, se irrita e nada parece funcionar?</p>
+    <p>Não é que o bebê não queira dormir. Ele precisa, mas não consegue. Está tão cansado e tão exausto que não consegue relaxar e adormecer.</p>
+    <div class="media"><div class="frame wide"><img class="mid" src="assets/chorando-colo.webp" alt="Bebê chorando no colo da mãe" loading="lazy"></div></div>
     <div class="quote">O bebê não chora porque não quer dormir, mas porque <em>precisa e não consegue!</em></div>
-    <p>O bebê não sabe o que fazer com tanto sono. E é por isso que ele precisa da nossa ajuda para chegar ao descanso.</p>
-    <p>Quando a família aprende a identificar os sinais e montar uma rotina adequada, tudo muda.</p>
-    <div class="cta-soft">
-      <p>Quer ajuda para montar essa rotina?</p>
-      <p style="font-weight:400;color:var(--muted);margin-bottom:14px">No final deste e-book eu te apresento o meu Método de Sono, que além de ensinar o bebê a dormir bem e no berço, também te ajuda a ajustar a rotina.</p>
-      <a class="buy" href="#metodo">QUERO CONHECER</a>
-    </div>
-    <div class="pnum">4</div>
+    <p>Os bebês entendem o sono como um desconforto, o que de fato é. Mas o que eles não sabem é como resolver esse desconforto para voltar a ficar confortáveis, que, nesse caso, é dormir.</p>
+    <p>É por isso que o bebê precisa da nossa ajuda para encontrar o caminho do sono e descansar.</p>
+    <h3 class="sub">O que fazer?</h3>
+    <p>Se o seu bebê briga muito contra o sono, é porque está entrando no que chamamos de <strong>efeito vulcânico</strong>. E precisamos evitar isso.</p>
+    <p>Ele precisa adormecer antes de chegar a esse ponto, quando está tão cansado, irritado e estressado que não consegue relaxar.</p>
+    <p>Para isso, é preciso organizar a rotina do seu bebê de acordo com as necessidades dele.</p>
+    <p>Eu te mostro como fazer isso no link abaixo.</p>
+    <a class="buy" href="#oferta" data-btn="bloco5-quero">QUERO</a>
   </article>
 
-  <!-- ============ MOTIVO 3 ============ -->
-  <article class="page t-sky" data-pg="5">
+  <!-- ============ BLOCO 6: MOTIVO 3 ============ -->
+  <article class="page t-mist" data-bloco="6-motivo3">
     <div class="num">03</div>
     <span class="kicker">Motivo 3</span>
     <h2 class="title">Cólica, gases <span class="em">e disquesia</span></h2>
-    <p class="lead">Muitas mães pensam que o desconforto é o motivo do bebê não dormir no berço. Mas se ele dorme bem no colo, mesmo em dias de cólica, isso mostra que <strong>o problema não está no desconforto, e sim na forma como ele adormece.</strong></p>
-    <p>Com algumas estratégias, mesmo bebês com desconfortos podem dormir bem no berço, com tranquilidade.</p>
-    <div class="media"><div class="frame wide"><img src="assets/motivo3.webp" alt="Bebê dormindo tranquilo" loading="lazy"></div></div>
-    <div class="note"><b>Gases, cólicas e disquesia são comuns nessa fase,</b> mas não precisam ser um obstáculo para o sono.</div>
-    <p>Quando a família entende os sinais de cansaço e organiza uma rotina que respeita o tempo do bebê, essa luta contra o sono diminui, e o adormecer se torna mais leve.</p>
-    <p>Mas se o bebê só consegue relaxar e dormir no colo, isso pode indicar uma <strong>associação negativa</strong> que precisa ser transformada.</p>
-    <p><em>No próximo tópico, eu te explico como isso acontece, e como ajudar o seu bebê a dormir bem, mesmo longe dos braços. ↓</em></p>
-    <div class="pnum">5</div>
+    <p class="lead">Muitas mães pensam que o motivo do bebê não dormir no berço é algum desconforto. E isso pode acontecer.</p>
+    <p>Mas precisamos pensar que, se o bebê está com algum desconforto abdominal, ele também sentiria esse desconforto no colo.</p>
+    <p>Então, se ele consegue dormir tranquilamente no colo, mas acorda quando é colocado no berço, isso mostra que precisamos olhar para a dificuldade em aceitar o berço, e não atribuir automaticamente o despertar a um desconforto abdominal.</p>
+    <div class="media"><div class="frame wide"><img class="mid" src="assets/chorando-deitado.webp" alt="Bebê chorando deitado de barriga para cima" loading="lazy"></div></div>
+    <p><strong>Cólica</strong> é uma dor abdominal que pode ser muito intensa e que vai e volta. O bebê pode senti-la várias vezes durante o dia e por vários dias seguidos. Quando isso acontece, é preciso conversar com um médico para avaliar e orientar os cuidados necessários.</p>
+    <p><strong>Gases e disquesia</strong> são comuns nos bebês por conta da imaturidade do organismo.</p>
+    <p>A disquesia é a dificuldade de coordenar os músculos para conseguir fazer cocô. Já os gases são naturais, afinal, todos nós temos gases.</p>
+    <p>Essas situações podem causar desconforto e atrapalhar o descanso, mas não significam que o bebê seja incapaz de dormir bem no berço.</p>
+    <p>Como são comuns, principalmente nos primeiros três meses de vida, existem estratégias que podem ajudar a contornar esses desconfortos.</p>
+    <div class="note"><b>Gases, cólica e disquesia são comuns nessa fase,</b> mas não precisam ser um obstáculo permanente para o sono no berço.</div>
+    <p>Se o bebê consegue relaxar e dormir no colo, podemos ajudá-lo a aprender a relaxar e dormir no berço também.</p>
+    <p><em>Se o seu bebê só consegue relaxar e dormir no colo, no próximo tópico eu te explico por que isso acontece e como ajudá-lo a dormir bem no berço. ↓</em></p>
   </article>
 
-  <!-- ============ MOTIVO 4 ============ -->
-  <article class="page t-cream" data-pg="6">
+  <!-- ============ BLOCO 7: MOTIVO 4 (tela 1) ============ -->
+  <article class="page t-cream" data-bloco="7-motivo4">
     <div class="num">04</div>
     <span class="kicker">Motivo 4</span>
     <h2 class="title">Bebê só aceita <span class="em">dormir no colo</span></h2>
-    <p class="lead">Por mais gostoso que seja ter o bebê no colo, chega uma hora em que todos estão exaustos.</p>
-    <div class="media"><div class="frame wide"><img class="top" src="assets/motivo4.webp" alt="Mãe ninando o bebê no colo" loading="lazy"></div></div>
-    <p>O problema não é o colo, mas sim <strong>o hábito de adormecer apenas nele.</strong> Isso faz com que o bebê não consiga voltar a dormir sozinho, e precise ser ninado a cada despertar.</p>
-    <p>Ensinar o bebê a dormir no próprio espaço, com carinho e segurança, é um presente para ele e para você. E o melhor: <strong>você não precisa deixar o bebê chorando para isso acontecer.</strong></p>
-    <div class="pnum">6</div>
+    <p class="lead">Por mais gostoso que seja ter o bebê nos braços, chega uma hora em que todos precisam descansar.</p>
+    <p>O problema não é o colo, mas sim <strong>o bebê só conseguir dormir dessa forma.</strong></p>
+    <p>Ensinar o bebê a dormir no próprio espaço, com carinho e segurança, é um presente para ele e para você.</p>
+    <div class="media"><div class="frame wide"><img class="mid" src="assets/dorme-colo.webp" alt="Bebê dormindo no colo" loading="lazy"></div></div>
+    <p>Nós sabemos que dormir em um colchão adequado é uma forma confortável de descansar.</p>
+    <p>Quando o bebê cria o hábito de só dormir no colo, além de prejudicar o conforto dele e da família, também pode criar o que chamamos de <strong>associação negativa de sono.</strong></p>
+    <p>Associação negativa é tudo aquilo que prejudica a qualidade do sono do bebê.</p>
+    <p>Muitas pessoas confundem, por exemplo, mamar antes de dormir com uma associação negativa. Mas mamar e adormecer é algo natural para os bebês, assim como acontece com outras espécies.</p>
+    <p>Então, não se preocupe se seu bebê mama antes de adormecer.</p>
+    <p>A questão não está em mamar, mas sim em ele não aceitar a transferência para o berço na sequência.</p>
+    <p>Isso mostra que a dificuldade pode não estar relacionada ao peito, mas ao hábito de dormir apenas no colo.</p>
   </article>
 
-  <!-- ============ MOTIVO 5 ============ -->
-  <article class="page t-mist" data-pg="7">
+  <!-- ============ BLOCO 7: MOTIVO 4 (tela 2, o que fazer) ============ -->
+  <article class="page t-cream" data-bloco="7-motivo4-fazer">
+    <h3 class="sub" style="margin-top:0">O que fazer?</h3>
+    <p>Neste caso, o bebê está acostumado a dormir coladinho no adulto, sentindo o cheiro, o calor e as batidas do coração.</p>
+    <p>É algo muito fofo!</p>
+    <p>Porém, o berço não tem nada disso. E é por isso que pode ser tão difícil para o bebê se adaptar.</p>
+    <p>Se simplesmente colocarmos o bebê no berço, é natural que ele acorde logo em seguida.</p>
+    <p>Para resolver, é necessário adaptar o bebê ao berço, ensinando-o a dormir ali.</p>
+    <p>Mas, antes disso, precisamos ensiná-lo a adormecer sem estar coladinho no adulto, para que consiga se adaptar ao berço.</p>
+    <p>E o caminho para isso <strong>não é deixar o bebê chorando no berço até que durma.</strong></p>
+    <p>Existe outra maneira de adaptar o bebê, com carinho e de forma gradual.</p>
+    <p>É tão suave que o bebê aprende sem nem perceber. E logo vai parecer que ele sempre dormiu assim.</p>
+    <p>Eu te mostro como fazer isso no link abaixo.</p>
+    <a class="buy" href="#oferta" data-btn="bloco7-quero">QUERO</a>
+  </article>
+
+  <!-- ============ BLOCO 8: MOTIVO 5 (tela 1) ============ -->
+  <article class="page t-lilac" data-bloco="8-motivo5">
     <div class="num">05</div>
     <span class="kicker">Motivo 5</span>
-    <h2 class="title">Berço <span class="em">com espinhos</span></h2>
-    <p class="lead">O bebê dorme profundamente no colo, mas basta encostar no berço para ele acordar? Parece até que o berço tem espinhos, né?</p>
+    <h2 class="title">Despertares <span class="em">noturnos</span></h2>
+    <p class="lead">Seu bebê dorme bem, mas tem muitos despertares noturnos?</p>
+    <p>Isso pode acontecer quando o bebê ainda não desenvolveu autonomia de sono, ou seja, quando ele não sabe emendar os ciclos de sono sozinho.</p>
+    <p>É muito comum com bebês que adormecem no colo.</p>
+    <p>Como esse se tornou o padrão de adormecer, a cada microdespertar o bebê precisa de uma experiência igual, ou pelo menos parecida, para conseguir voltar a dormir.</p>
+    <p>Por isso, ele reclama até receber ajuda.</p>
     <div class="media"><div class="frame wide"><img class="top" src="assets/motivo5.webp" alt="Mãe olhando o bebê no berço" loading="lazy"></div></div>
-    <p>Mas calma: isso tem explicação. O bebê se sente seguro e acolhido no colo, como se estivesse sendo abraçado. Já o berço é espaçoso, frio e diferente do corpo da mãe.</p>
-    <p>Essa mudança de ambiente causa estranhamento. Mas <strong>com uma boa transição, ele aprende a se sentir seguro no berço também.</strong></p>
-    <div class="pnum">7</div>
+    <p>Durante o sono noturno, todos nós temos vários microdespertares. Isso acontece também com nós, adultos.</p>
+    <p>Nós nos mexemos, mudamos de posição e, muitas vezes, voltamos a dormir sem nem perceber. Só despertamos completamente quando realmente precisamos de alguma coisa, como ir ao banheiro ou tomar um copo d'água.</p>
+    <p>Com o bebê não é diferente.</p>
+    <p>Durante o sono, ele também passa por vários microdespertares e precisa conseguir voltar a dormir.</p>
+    <p>Porém, se ele ainda não sabe como adormecer sem ajuda, também pode ter dificuldade para voltar a dormir sozinho.</p>
+    <p>Por isso, acaba chamando um adulto.</p>
+    <p>O bebê não faz isso porque quer. Com certeza, ele gostaria de voltar a dormir sem nem precisar despertar completamente.</p>
+    <p>Mas, como ainda não conhece esse caminho, precisa da ajuda do adulto.</p>
   </article>
 
-  <!-- ============ POR QUE ACONTECE ============ -->
-  <article class="page t-lilac" data-pg="8">
-    <span class="kicker">Resumindo</span>
+  <!-- ============ BLOCO 8: MOTIVO 5 (tela 2, o que fazer) ============ -->
+  <article class="page t-lilac" data-bloco="8-motivo5-fazer">
+    <h3 class="sub" style="margin-top:0">O que fazer?</h3>
+    <p>Para resolver, é preciso ensinar o caminho do sono para o bebê, desenvolvendo nele a autonomia de sono.</p>
+    <div class="note"><b>Autonomia de sono não é deixar o bebê chorando até que adormeça sozinho.</b> Autonomia de sono é a capacidade de adormecer e emendar os ciclos de sono de maneira natural.</div>
+    <p>Com essa habilidade, o bebê consegue voltar a dormir após os microdespertares e continua despertando quando realmente precisa de alguma coisa, como mamar ou receber algum cuidado.</p>
+    <p>E para desenvolver essa habilidade, não é necessário deixar o bebê chorando.</p>
+    <p>O processo pode ser tão suave que ele nem percebe que está aprendendo, sempre com muito carinho, presença e acolhimento dos pais.</p>
+    <p>No botão abaixo eu te mostro o caminho.</p>
+    <a class="buy" href="#oferta" data-btn="bloco8-quero">QUERO</a>
+  </article>
+
+  <!-- ============ BLOCO 9: POR QUE ACONTECE ============ -->
+  <article class="page t-mist" data-bloco="9-por-que">
     <h2 class="title">Por que tudo <span class="em">isso acontece?</span></h2>
     <p class="lead">Se eu pudesse resumir, diria que os dois grandes fatores são: <strong>falta de rotina</strong> e <strong>associações negativas de sono.</strong></p>
     <p>Quando o bebê aprende a dormir de uma forma que não consegue repetir sozinho, ele depende de ajuda a cada vez que acorda. Isso gera cansaço, frustração e noites picadas.</p>
     <div class="note"><b>A boa notícia?</b> Isso pode mudar, e de forma muito mais leve do que você imagina!</div>
     <div class="quote">Agora você sabe os motivos, e eu posso te mostrar <em>o passo a passo para resolver isso.</em></div>
-    <a class="buy" href="#metodo">QUERO O PASSO A PASSO</a>
-    <div class="pnum">8</div>
+    <a class="buy" href="#oferta" data-btn="bloco9-passo-a-passo">QUERO O PASSO A PASSO</a>
   </article>
 
-  <!-- ============ O QUE FAZER AGORA + MÉTODO ============ -->
-  <article class="page t-sky" id="metodo" data-pg="9">
-    <span class="kicker">O que fazer agora?</span>
+  <!-- ============ BLOCO 10: TRANSIÇÃO + OFERTA ============ -->
+  <article class="page t-sky" id="oferta" data-bloco="10-oferta">
     <h2 class="title">É hora de <span class="em">mudar a estratégia</span></h2>
     <p class="lead">Agora que você entende o que pode estar por trás das noites mal dormidas, é hora de mudar a estratégia.</p>
     <p>Com amor, paciência e orientação, você pode ensinar o seu bebê a dormir bem no berço, <strong>sem choro, sem traumas e no tempo dele.</strong> E eu posso te ajudar com isso.</p>
     <p>Ficar pegando e soltando o bebê no berço, várias vezes... só deixa vocês mais cansados, frustrados e o bebê ainda mais irritado.</p>
     <p>Você não precisa fazer seu bebê chorar para dormir bem. Existe um jeito leve, gentil e eficaz, com segurança, acolhimento e sem traumas.</p>
-    <div class="media"><div class="frame wide"><img class="top" src="assets/metodo.webp" alt="Bebê dormindo tranquilo no berço" loading="lazy"></div></div>
 
-    <div class="method">
-      <span class="mtag">Conheça o Método de Sono</span>
-      <div class="pname">DREAM BABY</div>
-      <div class="cond">O método Dream Baby ensina o seu bebê a dormir no berço de forma gentil, respeitosa e eficaz.</div>
-      <a class="buy" href="#" data-metodo>QUERO MEU BEBÊ DORMINDO NO BERÇO!</a>
-      <ul class="perks">
-        <li>Sem deixar o bebê chorando</li>
-        <li>Rotina ajustada ao tempo dele</li>
-        <li>Do jeito leve, com acolhimento</li>
+    <h3 class="sub">Conheça o Dream Baby Pocket</h3>
+    <p>O método Dream Baby ensina o seu bebê a dormir no berço de forma gentil, respeitosa e eficaz.</p>
+    <ul class="checks">
+      <li>Sem deixar o bebê chorando</li>
+      <li>Rotina ajustada ao tempo dele</li>
+      <li>Do jeito leve, com acolhimento</li>
+      <li>O bebê aprende a emendar os ciclos de sono sozinho, de maneira natural</li>
+    </ul>
+
+    <div class="recebe">
+      <h3>O que você recebe:</h3>
+      <ul class="checks">
+        <li>Acesso imediato ao Dream Baby Pocket</li>
+        <li>Quiz de diagnóstico + o perfil de sono do seu bebê</li>
+        <li>Plano de sono pro perfil dele (berço, sonecas e noite)</li>
+        <li>Passo a passo da transição pro berço, sem precisar deixar o bebê chorando</li>
+        <li><b>Super bônus:</b> todos os 5 perfis de sono (Canguru, Coala, Coruja, Leão e Suricato)</li>
+        <li><b>Bônus 1:</b> e-book Saltos de Desenvolvimento</li>
+        <li><b>Bônus 2:</b> e-book Atividades pra Gastar Energia</li>
+        <li><b>Bônus 3:</b> Mini Curso A Rotina do Bebê</li>
+        <li>Acesso por 12 meses · 7 dias de garantia incondicional</li>
       </ul>
     </div>
-    <div class="pnum">9</div>
-  </article>
 
-  <!-- ============ CARTA FINAL ============ -->
-  <article class="page t-cream" data-pg="10">
-    <span class="kicker">Estou te esperando</span>
-    <h2 class="title">O próximo passo é <span class="em">mudar isso com leveza</span></h2>
-    <p class="lead">Você já sabe por que o seu bebê pode não estar dormindo bem no berço. O próximo passo é aprender como mudar isso com leveza e acolhimento, com o Dream Baby!</p>
-    <div class="media"><div class="frame wide"><img class="top" src="assets/day-final.webp" alt="Dayane Dos Anjos" loading="lazy"></div></div>
-    <p>Você está fazendo um trabalho incrível, mesmo nos dias mais desafiadores. Você não precisa passar por isso sozinha. Se precisar de ajuda, estou aqui para te acolher e guiar.</p>
-    <p><strong>Vamos juntas?</strong></p>
-    <a class="buy big" href="#" data-metodo>QUERO MEU BEBÊ DORMINDO NO BERÇO!</a>
-    <div class="author" style="margin-top:28px">
-      <p class="sign-off">Com carinho,<b>Dayane Dos Anjos</b></p>
-      <div class="socials">
-        <a href="https://instagram.com/manualdorecemnascido" target="_blank" rel="noopener"><span class="ig"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 3.06A4.94 4.94 0 1 0 12 16.94 4.94 4.94 0 0 0 12 5.26zm0 8.14A3.2 3.2 0 1 1 12 8.8a3.2 3.2 0 0 1 0 6.4zm6.3-8.34a1.15 1.15 0 1 1-2.3 0 1.15 1.15 0 0 1 2.3 0z"/></svg></span>Instagram</a>
-        <a href="https://www.youtube.com/manualdorecemnascido" target="_blank" rel="noopener"><span class="yt"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 12s0-3.2-.4-4.7a2.5 2.5 0 0 0-1.73-1.73C19.4 5.2 12 5.2 12 5.2s-7.4 0-8.87.37A2.5 2.5 0 0 0 1.4 7.3C1 8.8 1 12 1 12s0 3.2.4 4.7a2.5 2.5 0 0 0 1.73 1.73c1.47.37 8.87.37 8.87.37s7.4 0 8.87-.37A2.5 2.5 0 0 0 22.6 16.7C23 15.2 23 12 23 12zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg></span>YouTube</a>
-        <a href="https://www.tiktok.com/@manualdorecemnascido" target="_blank" rel="noopener"><span class="tk"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.8a4.3 4.3 0 0 1-1-2.8h-3.1v12.3a2.4 2.4 0 1 1-2.4-2.4c.2 0 .5 0 .7.1V9.8a5.6 5.6 0 0 0-.7-.05A5.5 5.5 0 1 0 15.6 15.3V9.3a7.3 7.3 0 0 0 4.3 1.4V7.6a4.3 4.3 0 0 1-3.3-1.8z"/></svg></span>TikTok</a>
+    <div class="offer">
+      <div class="buy-card">
+        <div class="pname">Dream Baby Pocket</div>
+        <div class="cond">Ensine o seu bebê a dormir no berço com uma condição especial</div>
+        <p class="price">R$ 67</p>
+        <p class="cash">à vista no Pix, ou 12x de R$ 6,89</p>
+        <a class="buy big" href="#" data-checkout data-btn="bloco10-quero">QUERO!!</a>
+        <ul class="perks">
+          <li>Acesso imediato</li>
+          <li>Compra 100% segura</li>
+          <li>Garantia de 7 dias</li>
+        </ul>
+      </div>
+
+      <div class="bump" data-combo>
+        <span class="tag"><span class="wa"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.15-1.7-.83-1.96-.93-.26-.1-.45-.15-.64.15-.19.29-.74.93-.9 1.12-.17.19-.33.22-.62.07-.29-.15-1.22-.45-2.32-1.43-.86-.76-1.44-1.7-1.6-1.99-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.15-.64-1.55-.88-2.12-.23-.55-.47-.48-.64-.49h-.55c-.19 0-.51.07-.77.36-.26.29-1.01.99-1.01 2.41 0 1.42 1.04 2.8 1.18 2.99.15.19 2.05 3.13 4.96 4.39.69.3 1.23.48 1.65.61.69.22 1.32.19 1.82.12.56-.08 1.7-.7 1.94-1.36.24-.67.24-1.24.17-1.36-.07-.12-.26-.19-.55-.34zM12 2a10 10 0 0 0-8.6 15.05L2 22l5.05-1.32A10 10 0 1 0 12 2zm0 18.2c-1.5 0-2.98-.4-4.27-1.17l-.3-.18-3 .78.8-2.92-.2-.31A8.2 8.2 0 1 1 12 20.2z"/></svg></span>Leve com acompanhamento</span>
+        <div class="cname">Dream Baby Pocket + Consultora</div>
+        <div class="cdesc">Você pode ter acompanhamento com consultora de sono direto no seu whats, para te acompanhar, orientar e tirar suas dúvidas. Separado, esse acompanhamento sai por R$97. Aqui no combo, você leva os dois por R$147.</div>
+        <div class="bump-price">
+          <span class="l1">O combo ficará por</span>
+          <span class="l2">R$ 147</span>
+          <span class="l3">à vista ou em até 12x no cartão</span>
+        </div>
+        <a class="buy" href="#" data-checkout-combo data-btn="bloco10-combo">QUERO!!</a>
       </div>
     </div>
-    <div class="pnum">10</div>
+  </article>
+
+  <!-- ============ BLOCO 11: DAYANE ============ -->
+  <article class="page t-cream" data-bloco="11-dayane">
+    <span class="kicker">Quem vai te ensinar</span>
+    <div class="author">
+      <img class="day-photo" src="assets/day-bio.webp" alt="Dayane Dos Anjos" loading="lazy">
+    </div>
+    <p class="lead">Olá, eu sou a <strong>Dayane Dos Anjos</strong>, mãe, consultora de sono, amamentação e cuidados com o bebê.</p>
+    <p>Depois de acompanhar milhares de famílias, percebi que existem 5 motivos principais que dificultam o sono do bebê no berço. Foi por isso que criei o Dream Baby: um método que ensina o seu bebê a dormir no berço de forma gentil, respeitosa e eficaz.</p>
+    <div class="stats">
+      <div class="s"><span class="ic ic-alunas"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-6.7-4.3-9.3-8.1C.9 10.2 1.6 6.9 4.3 5.7c1.9-.8 3.9-.1 5.1 1.4L12 9.9l2.6-2.8c1.2-1.5 3.2-2.2 5.1-1.4 2.7 1.2 3.4 4.5 1.6 7.2C18.7 16.7 12 21 12 21z"/></svg></span><b>+21 mil</b><span class="lbl">alunas</span></div>
+      <div class="s"><span class="ic ic-yt"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 12s0-3.2-.4-4.7a2.5 2.5 0 0 0-1.73-1.73C19.4 5.2 12 5.2 12 5.2s-7.4 0-8.87.37A2.5 2.5 0 0 0 1.4 7.3C1 8.8 1 12 1 12s0 3.2.4 4.7a2.5 2.5 0 0 0 1.73 1.73c1.47.37 8.87.37 8.87.37s7.4 0 8.87-.37A2.5 2.5 0 0 0 22.6 16.7C23 15.2 23 12 23 12zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg></span><b>+807 mil</b><span class="lbl">inscritos</span></div>
+      <div class="s"><span class="ic ic-ig"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 3.06A4.94 4.94 0 1 0 12 16.94 4.94 4.94 0 0 0 12 5.26zm0 8.14A3.2 3.2 0 1 1 12 8.8a3.2 3.2 0 0 1 0 6.4zm6.3-8.34a1.15 1.15 0 1 1-2.3 0 1.15 1.15 0 0 1 2.3 0z"/></svg></span><b>+642 mil</b><span class="lbl">seguidores</span></div>
+      <div class="s"><span class="ic ic-tk"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.8a4.3 4.3 0 0 1-1-2.8h-3.1v12.3a2.4 2.4 0 1 1-2.4-2.4c.2 0 .5 0 .7.1V9.8a5.6 5.6 0 0 0-.7-.05A5.5 5.5 0 1 0 15.6 15.3V9.3a7.3 7.3 0 0 0 4.3 1.4V7.6a4.3 4.3 0 0 1-3.3-1.8z"/></svg></span><b>+660 mil</b><span class="lbl">seguidores</span></div>
+    </div>
+  </article>
+
+  <!-- ============ BLOCO 12: FAQ (igual ao da página do Dream Baby Pocket) ============ -->
+  <article class="page t-lilac" data-bloco="12-faq">
+    <span class="kicker">Perguntas frequentes</span>
+    <h2 class="title">Ficou alguma <span class="em">dúvida?</span></h2>
+    <details class="faq"><summary>Quanto tempo leva pra ver o meu plano?</summary><div class="a"><p>Em cerca de 30 minutos você responde o quiz, descobre o perfil e já sai com o passo a passo na mão pra aplicar já na próxima soneca.</p></div></details>
+    <details class="faq"><summary>O Dream Baby Pocket é indicado pra qual idade?</summary><div class="a"><p>Funciona pra bebês de 0 a 12 meses. E se você é gestante, dá pra já chegar preparada antes do bebê nascer.</p></div></details>
+    <details class="faq"><summary>Por que é sem choro?</summary><div class="a"><p>O método trabalha de forma gradual e respeitosa, sem deixar o bebê chorar. A ideia é uma transição suave, no ritmo dele, pra que se sinta confortável e protegido no berço.</p></div></details>
+    <details class="faq"><summary>Funciona pro meu bebê?</summary><div class="a"><p>O plano parte do quiz, então é montado a partir das respostas sobre o SEU bebê. E você ainda leva os cinco perfis, pra qualquer fase que vier.</p></div></details>
+    <details class="faq"><summary>O método também ajuda nas sonecas do dia?</summary><div class="a"><p>Com certeza. Organizar as sonecas facilita tudo. É importante que o bebê descanse bem de dia pra ter um sono noturno de qualidade também.</p></div></details>
+    <details class="faq"><summary>O curso inclui acompanhamento individual com consultora?</summary><div class="a"><p>Essa é a versão pocket do Dream Baby: direta ao ponto, focada no perfil do seu bebê, com aula objetiva e passo a passo. Ela não inclui o acompanhamento individual (que faz parte da versão completa). Mas, se você sentir necessidade, dá pra contratar à parte.</p></div></details>
+    <details class="faq"><summary>Qual é a forma de pagamento?</summary><div class="a"><p>Cartão de crédito, Pix, PayPal ou Google Pay. No cartão você pode parcelar em até 12x. O pagamento é 100% seguro.</p></div></details>
+    <details class="faq"><summary>Como funciona a garantia?</summary><div class="a"><p>Você tem 7 dias de garantia incondicional. Se por qualquer motivo não se adaptar, é só pedir o reembolso direto na Greenn dentro do prazo. Sem perguntas e sem burocracia.</p></div></details>
+    <details class="faq"><summary>Como vou acessar o curso?</summary><div class="a"><p>Após a confirmação do pagamento, o acesso chega no seu e-mail. O conteúdo fica disponível por 12 meses na plataforma.</p></div></details>
+  </article>
+
+  <!-- ============ BLOCO 13: CTA FINAL ============ -->
+  <article class="page t-cream" data-bloco="13-cta-final">
+    <h2 class="title">Você não precisa continuar tentando sozinha, <span class="em">eu posso te ajudar!!</span></h2>
+    <p class="lead">Você está fazendo um trabalho incrível, mesmo nos dias mais desafiadores. O Dream Baby Pocket foi feito pra resolver exatamente o que você acabou de reconhecer no seu bebê: ensinar ele a dormir no berço, de forma leve e acolhedora. <span data-combo>Se quiser, some o acompanhamento pelo WhatsApp por +R$97, ou leve o combo com desconto.</span></p>
+    <div class="media"><div class="frame wide"><img class="top" src="assets/day-final.webp" alt="Dayane Dos Anjos" loading="lazy"></div></div>
+    <p><strong>Vamos juntas?</strong></p>
+    <a class="buy big" href="#" data-checkout data-btn="bloco13-pocket">QUERO DREAM BABY POCKET · R$67</a>
+    <a class="buy" href="#" data-checkout-combo data-combo data-btn="bloco13-combo">QUERO DREAM BABY POCKET + ACOMPANHAMENTO · R$147</a>
+    <div class="reassure"><span>⚡ Acesso imediato</span><span>🔒 Compra segura</span><span>↩️ Garantia de 7 dias</span></div>
+    <p class="sign-off">Com carinho,<b>Dayane Dos Anjos</b></p>
+    <div class="socials">
+      <a href="https://instagram.com/manualdorecemnascido" target="_blank" rel="noopener"><span class="ig"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 3.06A4.94 4.94 0 1 0 12 16.94 4.94 4.94 0 0 0 12 5.26zm0 8.14A3.2 3.2 0 1 1 12 8.8a3.2 3.2 0 0 1 0 6.4zm6.3-8.34a1.15 1.15 0 1 1-2.3 0 1.15 1.15 0 0 1 2.3 0z"/></svg></span>Instagram</a>
+      <a href="https://www.youtube.com/manualdorecemnascido" target="_blank" rel="noopener"><span class="yt"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 12s0-3.2-.4-4.7a2.5 2.5 0 0 0-1.73-1.73C19.4 5.2 12 5.2 12 5.2s-7.4 0-8.87.37A2.5 2.5 0 0 0 1.4 7.3C1 8.8 1 12 1 12s0 3.2.4 4.7a2.5 2.5 0 0 0 1.73 1.73c1.47.37 8.87.37 8.87.37s7.4 0 8.87-.37A2.5 2.5 0 0 0 22.6 16.7C23 15.2 23 12 23 12zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg></span>YouTube</a>
+      <a href="https://www.tiktok.com/@manualdorecemnascido" target="_blank" rel="noopener"><span class="tk"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.8a4.3 4.3 0 0 1-1-2.8h-3.1v12.3a2.4 2.4 0 1 1-2.4-2.4c.2 0 .5 0 .7.1V9.8a5.6 5.6 0 0 0-.7-.05A5.5 5.5 0 1 0 15.6 15.3V9.3a7.3 7.3 0 0 0 4.3 1.4V7.6a4.3 4.3 0 0 1-3.3-1.8z"/></svg></span>TikTok</a>
+    </div>
   </article>
 
 </main>
 
 <script>
-// modo captura (só p/ screenshot: ?shot=N isola uma página)
+// modo captura (só p/ screenshot: ?shot=<data-bloco> isola um bloco)
 (function(){var s=new URLSearchParams(location.search).get('shot');if(!s)return;
-document.querySelectorAll('.page').forEach(function(p){if(p.dataset.pg!==s){p.style.display='none';}else{p.style.minHeight='auto';}});})();
+document.querySelectorAll('.page').forEach(function(p){if(p.dataset.bloco!==s)p.style.display='none';});})();
 
-// destino do CTA = página do método Dream Baby (mesmo link do PDF).
-// Se a página chegou com UTM/fbclid (anúncio), repassa os da visita; senão usa as UTMs da isca.
-var METODO = "https://db.manualdorecemnascido.com.br/mrn/";
-var UTM_ISCA = "utm_source=isca-digital&utm_campaign=organico&utm_medium=link-ebook&utm_id=clicou-link&utm_content=interno-ebook";
-function metodoUrl(){
-  var q = location.search.replace(/^\?/,'').replace(/(^|&)shot=[^&]*/,'').replace(/^&/,'');
-  return METODO + '?' + (q || UTM_ISCA);
-}
-document.querySelectorAll('[data-metodo]').forEach(function(a){a.href=metodoUrl()});
+// ---- checkout Greenn ----
+// Pocket avulso R$67 (oferta AXqJQg, a mesma do dbpocket) com os order bumps do dbpocket.
+var CHECKOUT = "https://payfast.greenn.com.br/119638/offer/AXqJQg?ch_id=140071&b_id_1=119672&b_offer_1=oKddbt&b_id_2=119627&b_offer_2=23sHiH&b_id_3=136511&b_offer_3=KeBGdY";
+// Combo Pocket + acompanhamento R$147: AINDA NÃO EXISTE na Greenn. Enquanto ficar vazio, o box do combo some da página.
+var CHECKOUT_COMBO = "";
+// UTMs padrão da isca (quando a visita chega sem UTM nenhuma)
+var UTM_ISCA = "utm_source=isca-digital&utm_medium=ebook-sono&utm_campaign=organico&utm_content=sem-utm";
 
-// indicador de página + barra de progresso (sensação de leitor de PDF)
-var pages=[].slice.call(document.querySelectorAll('.page'));
-var cur=document.getElementById('curpg'), bar=document.getElementById('bar');
-var io=new IntersectionObserver(function(es){
-  es.forEach(function(e){ if(e.isIntersecting){ cur.textContent=e.target.dataset.pg; } });
-},{rootMargin:"-45% 0px -45% 0px",threshold:0});
-pages.forEach(function(p){io.observe(p)});
-function prog(){
-  var h=document.documentElement, sc=h.scrollTop||document.body.scrollTop;
-  var max=h.scrollHeight-h.clientHeight;
-  bar.style.width=(max>0?(sc/max*100):0)+"%";
+function gc(n){var m=document.cookie.match('(^|; )'+n+'=([^;]+)');return m?decodeURIComponent(m[2]):'';}
+function passParams(){
+  var p=new URLSearchParams(location.search), pass=new URLSearchParams();
+  var keep=/^(utm_|src$|fbclid|gclid|ttclid|oppref)/i;
+  p.forEach(function(v,k){if(keep.test(k))pass.append(k,v);});
+  if(!pass.get('utm_source')&&!pass.get('utm_campaign')){
+    if(p.get('fbclid')){pass.append('utm_source','FB');pass.append('utm_medium','sem-url-tags');pass.append('utm_campaign','[EBOOK SONO] fallback');}
+    else new URLSearchParams(UTM_ISCA).forEach(function(v,k){pass.append(k,v);});
+  }
+  var fbp=gc('_fbp');if(fbp)pass.append('fbp',fbp);
+  var fbc=gc('_fbc');if(fbc)pass.append('fbc',fbc);
+  try{pass.append('ua',navigator.userAgent);}catch(e){}
+  return pass.toString();
 }
+function ck(base){var q=passParams();return base+(base.indexOf('?')>-1?'&':'?')+q;}
+document.querySelectorAll('[data-checkout]').forEach(function(a){a.href=ck(CHECKOUT)});
+if(CHECKOUT_COMBO){
+  document.querySelectorAll('[data-checkout-combo]').forEach(function(a){a.href=ck(CHECKOUT_COMBO)});
+}else{
+  document.querySelectorAll('[data-combo]').forEach(function(el){el.style.display='none'});
+}
+
+// ---- rastreamento: clique em cada botão (evento próprio) + InitiateCheckout no checkout ----
+document.querySelectorAll('[data-btn]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    var id=a.getAttribute('data-btn'), isCk=a.hasAttribute('data-checkout')||a.hasAttribute('data-checkout-combo');
+    try{ if(window.fbq) fbq('trackCustom','CliqueBotao',{botao:id,pagina:'ebook-sono'}); }catch(err){}
+    if(!isCk) return;
+    if(e.ctrlKey||e.metaKey||e.shiftKey||e.button) return;
+    e.preventDefault();
+    var combo=a.hasAttribute('data-checkout-combo');
+    try{ window.trackMeta&&window.trackMeta('InitiateCheckout',{content_name:combo?'ebook-sono-combo':'ebook-sono',value:combo?147.0:67.0,currency:'BRL',botao:id}); }catch(err){}
+    var href=a.href; setTimeout(function(){location.href=href;},250);
+  });
+});
+
+// ---- rastreamento: profundidade de rolagem por bloco (1x por bloco) ----
+(function(){
+  var vistos={};
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      var b=e.target.dataset.bloco;
+      if(!e.isIntersecting||vistos[b]) return;
+      vistos[b]=1;
+      try{ if(window.fbq) fbq('trackCustom','ViuBloco',{bloco:b,pagina:'ebook-sono'}); }catch(err){}
+    });
+  },{threshold:0.4});
+  document.querySelectorAll('.page[data-bloco]').forEach(function(p){io.observe(p)});
+})();
+
+// barra de progresso
+var bar=document.getElementById('bar');
+function prog(){var h=document.documentElement, sc=h.scrollTop||document.body.scrollTop, max=h.scrollHeight-h.clientHeight; bar.style.width=(max>0?(sc/max*100):0)+"%";}
 addEventListener('scroll',prog,{passive:true}); prog();
-
-// zoom (cara de leitor de PDF): ajusta a largura das folhas
-var W=820, zin=document.getElementById('zin'), zout=document.getElementById('zout');
-function setW(){document.documentElement.style.setProperty('--maxw',W+'px')}
-zin&&zin.addEventListener('click',function(){W=Math.min(1000,W+80);setW()});
-zout&&zout.addEventListener('click',function(){W=Math.max(560,W-80);setW()});
 </script>
 </body>
 </html>
