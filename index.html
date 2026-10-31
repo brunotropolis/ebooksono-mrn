@@ -126,7 +126,12 @@ h1,h2,h3{font-family:"Poppins",sans-serif; font-weight:600; line-height:1.18; co
 h2.title{font-size:clamp(25px,5.2vw,34px); margin:0 0 20px; text-wrap:balance}
 h2.title .em{color:var(--night); font-style:italic}
 h3.sub{font-size:clamp(20px,4.2vw,24px); margin:30px 0 14px; color:var(--night-deep)}
+h2.title::after{content:""; display:block; width:56px; height:4px; border-radius:4px; background:var(--gold); margin-top:16px; opacity:.85}
 p{margin:0 0 19px}
+/* a frase mais forte de cada folha (marca-texto) */
+.hl{font-weight:800; color:var(--night); font-size:1.04em}
+.next{color:var(--night); font-weight:700}
+.page > .media:first-of-type{margin:6px 0 26px}
 strong{color:var(--night-deep)}
 .lead{font-size:1.06em}
 .num{font-family:"Poppins",sans-serif; font-weight:800; font-size:clamp(56px,13vw,84px); line-height:.9; color:var(--night); opacity:.3; margin:0 0 -4px; letter-spacing:-2px}
@@ -284,44 +289,42 @@ details.faq .a p{margin:0}
 
   <!-- ============ BLOCO 1: ABERTURA ============ -->
   <article class="page t-sky" data-bloco="1-abertura" data-pg="2">
-    <p class="lead">Se o seu bebê só dorme no colo, briga contra o sono ou tem muitos despertares durante a noite, ele está precisando de ajuda para encontrar o caminho do sono. E isso não é falta de jeito sua.</p>
-    <p>Seja muito bem-vinda a este e-book, criado com muito carinho para te ajudar a entender por que o seu bebê não está dormindo bem no berço e, principalmente, <strong>como mudar isso de forma gentil e eficaz.</strong></p>
-    <p>Depois de acompanhar milhares de famílias, percebi que existem 5 motivos principais que dificultam o sono do bebê no berço. Esse material foi criado para te ajudar a identificar se algum desses está acontecendo por aí, e o que você pode fazer para melhorar.</p>
-    <p><em>Vamos começar? ↓</em></p>
+    <span class="kicker">Boas-vindas</span>
+    <div class="media"><div class="frame wide"><img class="top" src="assets/abertura.webp" alt="Dayane com um recém-nascido no colo" loading="lazy"></div></div>
+    <p class="lead">Se o seu bebê só dorme no colo, briga contra o sono ou tem muitos despertares durante a noite, ele está precisando de ajuda para encontrar o caminho do sono. <span class="hl">E isso não é falta de jeito sua.</span></p>
+    <p>Seja muito bem-vinda a este e-book, criado com muito carinho para te ajudar a entender por que o seu bebê não está dormindo bem no berço e, principalmente, como mudar isso de forma gentil e eficaz.</p>
+    <p>Depois de acompanhar milhares de famílias, percebi que existem 5 motivos principais que dificultam o sono do bebê no berço. Este material foi criado para te ajudar a identificar se algum deles está acontecendo por aí e o que você pode fazer para melhorar.</p>
+    <p class="next"><em>Vamos começar? ↓</em></p>
     <div class="pnum">2</div>
   </article>
 
   <!-- ============ BLOCO 2: MOTIVO 1 ============ -->
   <article class="page t-cream" data-bloco="2-motivo1" data-pg="3">
-    <div class="num">01</div>
     <span class="kicker">Motivo 1</span>
-    <h2 class="title">Idade <span class="em">do bebê</span></h2>
-    <p class="lead">Muita gente acredita que, com o tempo, o bebê vai começar a dormir melhor sozinho. Mas a verdade é que <strong>o sono é uma habilidade que se aprende.</strong> Todos nós, para adormecer, precisamos relaxar para encontrar o caminho do sono. Com o bebê não é diferente.</p>
-    <div class="media"><div class="frame wide"><img class="top" src="assets/motivo1.webp" alt="Bebê deitado de barriga para cima" loading="lazy"></div></div>
-    <p>O bebê aprende a dormir no berço quando a família ensina. Não depende de sorte, idade ou acaso. Quando ele aprende o caminho do sono, consegue emendar os ciclos de sono sozinho, de maneira natural, sem precisar da ajuda de um adulto a cada despertar. <strong>Isso transforma completamente a qualidade do sono do bebê e, por consequência, da família toda.</strong></p>
+    <h2 class="title">Idade do bebê</h2>
+    <div class="media"><div class="frame wide"><img class="top" src="assets/motivo1.webp" alt="Bebê acordado olhando para a câmera" loading="lazy"></div></div>
+    <p class="lead">Muita gente acredita que, com o tempo, o bebê vai começar a dormir melhor sozinho. Mas a verdade é que <span class="hl">o sono é uma habilidade que se aprende.</span> Todos nós, para adormecer, precisamos relaxar e encontrar o caminho do sono. Com o bebê não é diferente.</p>
+    <p>O bebê aprende a dormir no berço quando a família ensina. Não depende de sorte, idade ou acaso. Quando ele aprende o caminho do sono, consegue emendar os ciclos de sono sozinho, de maneira natural, sem precisar da ajuda de um adulto a cada despertar. Isso transforma completamente a qualidade do sono do bebê e, por consequência, da família toda.</p>
     <div class="pnum">3</div>
   </article>
 
   <!-- ============ BLOCO 3: PRECISO ESPERAR? ============ -->
   <article class="page t-lilac" data-bloco="3-esperar" data-pg="4">
-    <h2 class="title">Preciso esperar meu bebê crescer para ensinar <span class="em">autonomia de sono?</span></h2>
-    <p>Você já deve ter ouvido falar que é preciso esperar o bebê completar 4, 5 ou 6 meses para ensinar autonomia de sono, que não é possível ensinar antes disso.</p>
-    <p>Isso acontece porque, para essas pessoas, o único caminho para ensinar o bebê a dormir no berço é deixá-lo chorando.</p>
+    <h2 class="title">Preciso esperar meu bebê crescer para ensinar autonomia de sono?</h2>
+    <div class="media"><div class="frame wide"><img class="top" src="assets/motivo5.webp" alt="Mãe ao lado do berço olhando o bebê" loading="lazy"></div></div>
+    <p>Você já deve ter ouvido falar que é preciso esperar o bebê completar 4, 5 ou 6 meses para ensinar autonomia de sono, porque antes disso não seria possível. Isso acontece porque, para essas pessoas, o único caminho para ensinar o bebê a dormir no berço é deixá-lo chorando.</p>
     <p>Elas acreditam que, a partir de certa idade, o bebê não precisa mais mamar à noite e que, se ele chora, é por manha, não porque precisa de alguma coisa. Então, para resolver, basta deixá-lo chorando até que pare.</p>
-    <div class="media"><div class="frame wide"><img class="top" src="assets/motivo4.webp" alt="Mãe com o bebê no colo no quarto" loading="lazy"></div></div>
-    <p><strong>Esse não é o caminho em que eu acredito e que eu ensino.</strong></p>
-    <p>Eu gosto de mostrar para as famílias como conduzir o bebê para a autonomia de sono, sem deixá-lo chorando, mas com presença e de forma suave.</p>
+    <p><span class="hl">Esse não é o caminho em que eu acredito e que eu ensino.</span> Eu gosto de mostrar para as famílias como conduzir o bebê para a autonomia de sono, sem deixá-lo chorando, mas com presença e de forma suave.</p>
     <div class="pnum">4</div>
   </article>
 
   <!-- ============ BLOCO 4: DESDE RECÉM-NASCIDO ============ -->
   <article class="page t-sky" data-bloco="4-recem-nascido" data-pg="5">
-    <h2 class="title">O bebê é capaz de aprender <span class="em">desde recém-nascido</span></h2>
+    <h2 class="title">O bebê é capaz de aprender desde recém-nascido</h2>
+    <div class="media"><div class="frame wide"><img class="mid" src="assets/metodo.webp" alt="Recém-nascido dormindo no berço" loading="lazy"></div></div>
     <p class="lead">Mesmo dormindo tranquilamente no colo dos pais, o bebê pode aprender a dormir no berço.</p>
     <p>Existe um passo a passo para isso, de forma gradual. O bebê vai aprendendo a dormir sem o contato físico dos pais, aos poucos, com muita presença e acolhimento. É tão suave que ele nem percebe que está passando por esse processo.</p>
-    <div class="media"><div class="frame wide"><img class="mid" src="assets/metodo.webp" alt="Bebê dormindo de barriga para cima no berço" loading="lazy"></div></div>
-    <p>Isso não significa que vai levar meses para aprender. Dependendo do ponto em que você está e das dificuldades que seu bebê tem para dormir, são necessários pouquíssimos dias para implementar e começar a ver resultados.</p>
-    <p>É por isso que eu digo que <strong>um bebê, desde recém-nascido, pode dormir bem no berço.</strong></p>
+    <p>Isso não significa que vai levar meses para aprender. Dependendo do ponto em que você está e das dificuldades que seu bebê tem para dormir, são necessários pouquíssimos dias para implementar as mudanças e começar a perceber resultados. É por isso que eu digo que <span class="hl">um bebê, desde recém-nascido, pode dormir bem no berço.</span></p>
     <p>Afinal, até poucos dias antes de nascer, o bebê já adormecia e emendava os ciclos de sono sozinho, ainda na barriga. Essa é uma habilidade que já vem com ele.</p>
     <p>A gente só precisa manter essa habilidade e adaptar o bebê ao berço. E, caso ele já esteja maior e tenha desaprendido, é possível retomar esse caminho de forma gradual e gentil.</p>
     <div class="pnum">5</div>
@@ -329,140 +332,112 @@ details.faq .a p{margin:0}
 
   <!-- ============ BLOCO 5: MOTIVO 2 ============ -->
   <article class="page t-cream" data-bloco="5-motivo2" data-pg="6">
-    <div class="num">02</div>
     <span class="kicker">Motivo 2</span>
-    <h2 class="title">Bebê briga <span class="em">contra o sono</span></h2>
+    <h2 class="title">Bebê briga contra o sono</h2>
+    <div class="media"><div class="frame wide"><img class="mid" src="assets/chorando-colo.webp" alt="Mãe segurando o bebê que chora" loading="lazy"></div></div>
     <p class="lead">Sabe aquele momento em que o bebê está claramente exausto, mas parece resistir ao sono? Ele chora, se irrita e nada parece funcionar?</p>
-    <p>Não é que o bebê não queira dormir. Ele precisa, mas não consegue. Está tão cansado e tão exausto que não consegue relaxar e adormecer.</p>
-    <div class="media"><div class="frame wide"><img class="mid" src="assets/chorando-colo.webp" alt="Bebê chorando no colo da mãe" loading="lazy"></div></div>
+    <p>Não é que o bebê não queira dormir. Ele precisa, mas não consegue. Está tão cansado e exausto que não consegue relaxar e adormecer.</p>
     <div class="quote">O bebê não chora porque não quer dormir, mas porque <em>precisa e não consegue!</em></div>
-    <p>Os bebês entendem o sono como um desconforto, o que de fato é. Mas o que eles não sabem é como resolver esse desconforto para voltar a ficar confortáveis, que, nesse caso, é dormir.</p>
-    <p>É por isso que o bebê precisa da nossa ajuda para encontrar o caminho do sono e descansar.</p>
-    <h3 class="sub">O que fazer?</h3>
-    <p>Se o seu bebê briga muito contra o sono, é porque está entrando no que chamamos de <strong>efeito vulcânico</strong>. E precisamos evitar isso.</p>
+    <p>Os bebês entendem o sono como um desconforto, o que de fato é. Mas o que eles não sabem é como resolver esse desconforto para voltar a ficar confortáveis. E, nesse caso, a solução é dormir. É por isso que o bebê precisa da nossa ajuda para encontrar o caminho do sono e descansar.</p>
+    <p>Se o seu bebê briga muito contra o sono, é porque está entrando no que chamamos de efeito vulcânico. E precisamos evitar isso.</p>
     <p>Ele precisa adormecer antes de chegar a esse ponto, quando está tão cansado, irritado e estressado que não consegue relaxar.</p>
-    <p>Para isso, é preciso organizar a rotina do seu bebê de acordo com as necessidades dele.</p>
-    <p>Eu te mostro como fazer isso no link abaixo.</p>
+    <p>Para isso, é preciso organizar a rotina do seu bebê de acordo com as necessidades dele. Eu te mostro como fazer isso no link abaixo.</p>
     <a class="buy" href="#oferta" data-btn="bloco5-quero">QUERO</a>
     <div class="pnum">6</div>
   </article>
 
-  <!-- ============ BLOCO 6: MOTIVO 3 ============ -->
+  <!-- ============ BLOCO 6: MOTIVO 3 (tela 1) ============ -->
   <article class="page t-mist" data-bloco="6-motivo3" data-pg="7">
-    <div class="num">03</div>
     <span class="kicker">Motivo 3</span>
-    <h2 class="title">Cólica, gases <span class="em">e disquesia</span></h2>
+    <h2 class="title">Cólica, gases e disquesia</h2>
+    <div class="media"><div class="frame wide"><img class="mid" src="assets/dormindo-tranquilo.webp" alt="Bebê dormindo tranquilo de barriga para cima" loading="lazy"></div></div>
     <p class="lead">Muitas mães pensam que o motivo do bebê não dormir no berço é algum desconforto. E isso pode acontecer.</p>
     <p>Mas precisamos pensar que, se o bebê está com algum desconforto abdominal, ele também sentiria esse desconforto no colo.</p>
-    <p>Então, se ele consegue dormir tranquilamente no colo, mas acorda quando é colocado no berço, isso mostra que precisamos olhar para a dificuldade em aceitar o berço, e não atribuir automaticamente o despertar a um desconforto abdominal.</p>
-    <div class="media"><div class="frame wide"><img class="mid" src="assets/chorando-deitado.webp" alt="Bebê chorando deitado de barriga para cima" loading="lazy"></div></div>
-    <p><strong>Cólica</strong> é uma dor abdominal que pode ser muito intensa e que vai e volta. O bebê pode senti-la várias vezes durante o dia e por vários dias seguidos. Quando isso acontece, é preciso conversar com um médico para avaliar e orientar os cuidados necessários.</p>
-    <p><strong>Gases e disquesia</strong> são comuns nos bebês por conta da imaturidade do organismo.</p>
-    <p>A disquesia é a dificuldade de coordenar os músculos para conseguir fazer cocô. Já os gases são naturais, afinal, todos nós temos gases.</p>
-    <p>Essas situações podem causar desconforto e atrapalhar o descanso, mas não significam que o bebê seja incapaz de dormir bem no berço.</p>
-    <p>Como são comuns, principalmente nos primeiros três meses de vida, existem estratégias que podem ajudar a contornar esses desconfortos.</p>
-    <div class="note"><b>Gases, cólica e disquesia são comuns nessa fase,</b> mas não precisam ser um obstáculo permanente para o sono no berço.</div>
-    <p>Se o bebê consegue relaxar e dormir no colo, podemos ajudá-lo a aprender a relaxar e dormir no berço também.</p>
-    <p><em>Se o seu bebê só consegue relaxar e dormir no colo, no próximo tópico eu te explico por que isso acontece e como ajudá-lo a dormir bem no berço. ↓</em></p>
+    <p><span class="hl">Então, se ele consegue dormir tranquilamente no colo, mas acorda quando é colocado no berço, precisamos olhar para a dificuldade em aceitar o berço,</span> em vez de atribuir automaticamente o despertar a um desconforto abdominal.</p>
+    <p>A cólica é uma dor abdominal que pode ser muito intensa e que vai e volta. O bebê pode senti-la várias vezes durante o dia e por vários dias seguidos. Quando isso acontece, é preciso conversar com um médico para avaliar a situação e orientar os cuidados necessários.</p>
     <div class="pnum">7</div>
   </article>
 
-  <!-- ============ BLOCO 7: MOTIVO 4 (tela 1) ============ -->
-  <article class="page t-cream" data-bloco="7-motivo4" data-pg="8">
-    <div class="num">04</div>
-    <span class="kicker">Motivo 4</span>
-    <h2 class="title">Bebê só aceita <span class="em">dormir no colo</span></h2>
-    <p class="lead">Por mais gostoso que seja ter o bebê nos braços, chega uma hora em que todos precisam descansar.</p>
-    <p>O problema não é o colo, mas sim <strong>o bebê só conseguir dormir dessa forma.</strong></p>
-    <p>Ensinar o bebê a dormir no próprio espaço, com carinho e segurança, é um presente para ele e para você.</p>
-    <div class="media"><div class="frame wide"><img class="mid" src="assets/dorme-colo.webp" alt="Bebê dormindo no colo" loading="lazy"></div></div>
-    <p>Nós sabemos que dormir em um colchão adequado é uma forma confortável de descansar.</p>
-    <p>Quando o bebê cria o hábito de só dormir no colo, além de prejudicar o conforto dele e da família, também pode criar o que chamamos de <strong>associação negativa de sono.</strong></p>
-    <p>Associação negativa é tudo aquilo que prejudica a qualidade do sono do bebê.</p>
-    <p>Muitas pessoas confundem, por exemplo, mamar antes de dormir com uma associação negativa. Mas mamar e adormecer é algo natural para os bebês, assim como acontece com outras espécies.</p>
-    <p>Então, não se preocupe se seu bebê mama antes de adormecer.</p>
-    <p>A questão não está em mamar, mas sim em ele não aceitar a transferência para o berço na sequência.</p>
-    <p>Isso mostra que a dificuldade pode não estar relacionada ao peito, mas ao hábito de dormir apenas no colo.</p>
+  <!-- ============ BLOCO 6: MOTIVO 3 (tela 2) ============ -->
+  <article class="page t-mist" data-bloco="6-motivo3-gases" data-pg="8">
+    <span class="kicker">Motivo 3</span>
+    <h2 class="title">Gases e disquesia são comuns nos bebês por conta da imaturidade do organismo.</h2>
+    <div class="media"><div class="frame wide"><img class="mid" src="assets/dorme-colo.webp" alt="Bebê dormindo tranquilo no colo" loading="lazy"></div></div>
+    <p class="lead">A disquesia é a dificuldade de coordenar os músculos para conseguir fazer cocô. Já os gases são naturais, afinal, todos nós temos gases.</p>
+    <p>Essas situações podem causar desconforto e atrapalhar o descanso, mas não significam que o bebê seja incapaz de dormir bem no berço.</p>
+    <p>Como são comuns, principalmente nos primeiros três meses de vida, existem estratégias que podem ajudar a contornar esses desconfortos.</p>
+    <p><span class="hl">Gases, cólica e disquesia são comuns nessa fase, mas não precisam ser um obstáculo permanente para o sono no berço.</span></p>
+    <p>Se o bebê consegue relaxar e dormir no colo, podemos ajudá-lo a aprender a relaxar e dormir no berço também. No próximo tópico, eu explico por que isso acontece e como ajudá-lo nessa situação.</p>
     <div class="pnum">8</div>
   </article>
 
-  <!-- ============ BLOCO 7: MOTIVO 4 (tela 2, o que fazer) ============ -->
-  <article class="page t-cream" data-bloco="7-motivo4-fazer" data-pg="9">
-    <h3 class="sub" style="margin-top:0">O que fazer?</h3>
-    <p>Neste caso, o bebê está acostumado a dormir coladinho no adulto, sentindo o cheiro, o calor e as batidas do coração.</p>
-    <p>É algo muito fofo!</p>
-    <p>Porém, o berço não tem nada disso. E é por isso que pode ser tão difícil para o bebê se adaptar.</p>
-    <p>Se simplesmente colocarmos o bebê no berço, é natural que ele acorde logo em seguida.</p>
-    <p>Para resolver, é necessário adaptar o bebê ao berço, ensinando-o a dormir ali.</p>
-    <p>Mas, antes disso, precisamos ensiná-lo a adormecer sem estar coladinho no adulto, para que consiga se adaptar ao berço.</p>
-    <p>E o caminho para isso <strong>não é deixar o bebê chorando no berço até que durma.</strong></p>
-    <p>Existe outra maneira de adaptar o bebê, com carinho e de forma gradual.</p>
-    <p>É tão suave que o bebê aprende sem nem perceber. E logo vai parecer que ele sempre dormiu assim.</p>
-    <p>Eu te mostro como fazer isso no link abaixo.</p>
-    <a class="buy" href="#oferta" data-btn="bloco7-quero">QUERO</a>
+  <!-- ============ BLOCO 7: MOTIVO 4 (tela 1) ============ -->
+  <article class="page t-cream" data-bloco="7-motivo4" data-pg="9">
+    <span class="kicker">Motivo 4</span>
+    <h2 class="title">Bebê só aceita dormir no colo</h2>
+    <div class="media"><div class="frame wide"><img class="top" src="assets/motivo4.webp" alt="Mãe ninando o bebê no quarto" loading="lazy"></div></div>
+    <p class="lead">Por mais gostoso que seja ter o bebê nos braços, chega uma hora em que todos precisam descansar. <span class="hl">O problema não é o colo, mas o bebê só conseguir dormir dessa forma.</span> Ensinar o bebê a dormir no próprio espaço, com carinho e segurança, é um presente para ele e para você.</p>
+    <p>Nós sabemos que dormir em um colchão adequado é uma forma confortável de descansar. Quando o bebê cria o hábito de só dormir no colo, além de prejudicar o conforto dele e da família, também pode criar o que chamamos de associação negativa de sono. Associação negativa é tudo aquilo que prejudica a qualidade do sono do bebê.</p>
+    <p>Muita gente confunde mamar antes de dormir com uma associação negativa. Mas mamar e adormecer é natural para os bebês, assim como acontece com outras espécies. Então, não se preocupe se o seu bebê mama antes de adormecer.</p>
+    <p>A questão não está em mamar e adormecer, mas sim em aceitar dormir no berço. Isso mostra que a dificuldade não está relacionada ao peito, mas ao hábito de dormir apenas no colo.</p>
     <div class="pnum">9</div>
   </article>
 
-  <!-- ============ BLOCO 8: MOTIVO 5 (tela 1) ============ -->
-  <article class="page t-lilac" data-bloco="8-motivo5" data-pg="10">
-    <div class="num">05</div>
-    <span class="kicker">Motivo 5</span>
-    <h2 class="title">Despertares <span class="em">noturnos</span></h2>
-    <p class="lead">Seu bebê dorme bem, mas tem muitos despertares noturnos?</p>
-    <p>Isso pode acontecer quando o bebê ainda não desenvolveu autonomia de sono, ou seja, quando ele não sabe emendar os ciclos de sono sozinho.</p>
-    <p>É muito comum com bebês que adormecem no colo.</p>
-    <p>Como esse se tornou o padrão de adormecer, a cada microdespertar o bebê precisa de uma experiência igual, ou pelo menos parecida, para conseguir voltar a dormir.</p>
-    <p>Por isso, ele reclama até receber ajuda.</p>
-    <div class="media"><div class="frame wide"><img class="top" src="assets/motivo5.webp" alt="Mãe olhando o bebê no berço" loading="lazy"></div></div>
-    <p>Durante o sono noturno, todos nós temos vários microdespertares. Isso acontece também com nós, adultos.</p>
-    <p>Nós nos mexemos, mudamos de posição e, muitas vezes, voltamos a dormir sem nem perceber. Só despertamos completamente quando realmente precisamos de alguma coisa, como ir ao banheiro ou tomar um copo d'água.</p>
-    <p>Com o bebê não é diferente.</p>
-    <p>Durante o sono, ele também passa por vários microdespertares e precisa conseguir voltar a dormir.</p>
-    <p>Porém, se ele ainda não sabe como adormecer sem ajuda, também pode ter dificuldade para voltar a dormir sozinho.</p>
-    <p>Por isso, acaba chamando um adulto.</p>
-    <p>O bebê não faz isso porque quer. Com certeza, ele gostaria de voltar a dormir sem nem precisar despertar completamente.</p>
-    <p>Mas, como ainda não conhece esse caminho, precisa da ajuda do adulto.</p>
+  <!-- ============ BLOCO 7: MOTIVO 4 (tela 2) ============ -->
+  <article class="page t-cream" data-bloco="7-motivo4-fazer" data-pg="10">
+    <span class="kicker">Motivo 4</span>
+    <h2 class="title">O que fazer quando o bebê só aceita dormir no colo?</h2>
+    <div class="media"><div class="frame wide"><img class="top" src="assets/colo-coladinho.webp" alt="Bebê coladinho no colo da Dayane" loading="lazy"></div></div>
+    <p class="lead">Nesse caso, o bebê está acostumado a dormir coladinho no adulto, sentindo o cheiro, o calor e as batidas do coração. É algo muito fofo e aconchegante.</p>
+    <p>Porém, o berço não tem nada disso. O bebê pode ter esse contato em vários momentos do dia, mas, na hora de dormir, é muito importante para o descanso de todos que ele consiga dormir tranquilamente no berço também.</p>
+    <p>Para isso, é necessário adaptar o bebê ao berço, ensinando-o a dormir ali. Se simplesmente colocarmos o bebê no berço, é natural que ele acorde logo em seguida e chore, porque ainda não está pronto para essa mudança. Antes disso, precisamos ajudá-lo a se adaptar.</p>
+    <p>E o caminho para isso não é deixá-lo chorando sozinho até que durma de exaustão. <span class="hl">Existe outra maneira de adaptar o bebê, com carinho e de forma gradual.</span> É o que eu ensino para as minhas alunas, por meio de uma maneira que desenvolvi para ajudar o bebê a dormir sem estar coladinho nos pais.</p>
+    <p>É tão gradual que o bebê aprende dormindo, sem nem mesmo perceber. E logo vai parecer que sempre dormiu assim. Eu te mostro como fazer isso no link abaixo.</p>
+    <a class="buy" href="#oferta" data-btn="bloco7-quero">QUERO</a>
     <div class="pnum">10</div>
   </article>
 
-  <!-- ============ BLOCO 8: MOTIVO 5 (tela 2, o que fazer) ============ -->
-  <article class="page t-lilac" data-bloco="8-motivo5-fazer" data-pg="11">
-    <h3 class="sub" style="margin-top:0">O que fazer?</h3>
-    <p>Para resolver, é preciso ensinar o caminho do sono para o bebê, desenvolvendo nele a autonomia de sono.</p>
-    <div class="note"><b>Autonomia de sono não é deixar o bebê chorando até que adormeça sozinho.</b> Autonomia de sono é a capacidade de adormecer e emendar os ciclos de sono de maneira natural.</div>
-    <p>Com essa habilidade, o bebê consegue voltar a dormir após os microdespertares e continua despertando quando realmente precisa de alguma coisa, como mamar ou receber algum cuidado.</p>
-    <p>E para desenvolver essa habilidade, não é necessário deixar o bebê chorando.</p>
-    <p>O processo pode ser tão suave que ele nem percebe que está aprendendo, sempre com muito carinho, presença e acolhimento dos pais.</p>
-    <p>No botão abaixo eu te mostro o caminho.</p>
-    <a class="buy" href="#oferta" data-btn="bloco8-quero">QUERO</a>
+  <!-- ============ BLOCO 8: MOTIVO 5 (tela 1) ============ -->
+  <article class="page t-lilac" data-bloco="8-motivo5" data-pg="11">
+    <span class="kicker">Motivo 5</span>
+    <h2 class="title">Despertares noturnos</h2>
+    <div class="media"><div class="frame wide"><img class="mid" src="assets/chorando-deitado.webp" alt="Bebê acordando de barriga para cima" loading="lazy"></div></div>
+    <p class="lead">Durante o sono noturno, todos nós temos vários microdespertares. Isso acontece também com os adultos. Nós nos mexemos, mudamos de posição e, na maioria das vezes, voltamos a dormir sem nem perceber. Só despertamos completamente quando precisamos de alguma coisa, como ir ao banheiro ou tomar um copo d'água.</p>
+    <p>Com o bebê não é diferente. Durante o sono, ele também passa por vários microdespertares e precisa voltar a dormir.</p>
+    <p>É por isso que a forma como o bebê adormece é tão importante. Afinal, a cada microdespertar, ele precisa conseguir voltar a dormir para emendar os ciclos de sono. <span class="hl">Mas como ele vai voltar a dormir se ainda não sabe adormecer sozinho?</span></p>
+    <p>É por isso que o bebê tem tantos despertares. A cada microdespertar, ele precisa voltar a dormir e, se ainda não sabe fazer isso sozinho, acaba precisando da ajuda de um adulto.</p>
+    <p>Quando desenvolvemos a habilidade de autonomia de sono no bebê, isso não acontece mais. Ele aprende a voltar a dormir sozinho, de forma tranquila. Assim, consegue emendar os ciclos de sono e só desperta durante a noite quando realmente precisa de algo, seja para se alimentar ou por qualquer outra necessidade. Mas, quando se trata apenas de voltar a dormir, ele já conhece o caminho e consegue fazer isso sozinho, de forma tranquila, sem interromper ou atrapalhar o próprio sono.</p>
     <div class="pnum">11</div>
   </article>
 
-  <!-- ============ BLOCO 9: POR QUE ACONTECE ============ -->
-  <article class="page t-mist" data-bloco="9-por-que" data-pg="12">
-    <h2 class="title">Por que tudo <span class="em">isso acontece?</span></h2>
-    <p class="lead">Se eu pudesse resumir, diria que os dois grandes fatores são: <strong>falta de rotina</strong> e <strong>associações negativas de sono.</strong></p>
-    <p>Quando o bebê aprende a dormir de uma forma que não consegue repetir sozinho, ele depende de ajuda a cada vez que acorda. Isso gera cansaço, frustração e noites picadas.</p>
-    <div class="note"><b>A boa notícia?</b> Isso pode mudar, e de forma muito mais leve do que você imagina!</div>
-    <div class="quote">Agora você sabe os motivos, e eu posso te mostrar <em>o passo a passo para resolver isso.</em></div>
-    <a class="buy" href="#oferta" data-btn="bloco9-passo-a-passo">QUERO O PASSO A PASSO</a>
+  <!-- ============ BLOCO 8: MOTIVO 5 (tela 2) ============ -->
+  <article class="page t-lilac" data-bloco="8-motivo5-fazer" data-pg="12">
+    <span class="kicker">Motivo 5</span>
+    <h2 class="title">Autonomia de sono</h2>
+    <div class="media"><div class="frame wide"><img class="mid" src="assets/capa-segura.webp" alt="Bebê dormindo tranquilo de barriga para cima" loading="lazy"></div></div>
+    <div class="quote">Autonomia de sono <em>não é deixar o bebê chorando</em> até que adormeça sozinho.</div>
+    <p>Autonomia de sono é a capacidade de adormecer e emendar os ciclos de sono de maneira natural. Para desenvolver essa habilidade, é preciso ensinar ao bebê o caminho do sono.</p>
+    <p>E, para isso, não é necessário deixá-lo chorando no berço, nem ficar pegando e colocando de volta repetidas vezes, até que todos fiquem extremamente cansados e irritados. Muito pelo contrário.</p>
+    <p>Eu criei o método de sono Dream Baby, no qual ensino aos pais o caminho para ajudar o bebê a se adaptar ao berço, dormir tranquilamente, em segurança, e ter um sono reparador.</p>
+    <p>Esse é o caminho para a autonomia de sono, de forma gradual e gentil, com muito contato, cuidado e carinho dos pais. No botão abaixo, eu te mostro como funciona.</p>
+    <a class="buy" href="#oferta" data-btn="bloco8-quero">QUERO</a>
     <div class="pnum">12</div>
   </article>
 
   <!-- ============ BLOCO 10: TRANSIÇÃO + OFERTA ============ -->
   <article class="page t-sky" id="oferta" data-bloco="10-oferta" data-pg="13">
-    <h2 class="title">É hora de <span class="em">mudar a estratégia</span></h2>
+    <h2 class="title">É hora de mudar a estratégia</h2>
+    <div class="media"><div class="frame wide"><img class="mid" src="assets/dormindo-tranquilo.webp" alt="Bebê dormindo tranquilo" loading="lazy"></div></div>
     <p class="lead">Agora que você entende o que pode estar por trás das noites mal dormidas, é hora de mudar a estratégia.</p>
-    <p>Com amor, paciência e orientação, você pode ensinar o seu bebê a dormir bem no berço, <strong>sem choro, sem traumas e no tempo dele.</strong> E eu posso te ajudar com isso.</p>
-    <p>Ficar pegando e soltando o bebê no berço, várias vezes... só deixa vocês mais cansados, frustrados e o bebê ainda mais irritado.</p>
-    <p>Você não precisa fazer seu bebê chorar para dormir bem. Existe um jeito leve, gentil e eficaz, com segurança, acolhimento e sem traumas.</p>
+    <p>Com amor, paciência e orientação, você pode ensinar o seu bebê a dormir bem no berço, <span class="hl">sem choro, sem traumas e no tempo dele.</span> E eu posso te ajudar com isso.</p>
+    <p>Você não precisa deixar seu bebê chorando para que ele durma bem. Existe um jeito leve, gentil e eficaz, com segurança, acolhimento e sem traumas.</p>
 
     <h3 class="sub">Conheça o Dream Baby Pocket</h3>
     <p>O método Dream Baby ensina o seu bebê a dormir no berço de forma gentil, respeitosa e eficaz.</p>
     <ul class="checks">
       <li>Sem deixar o bebê chorando</li>
       <li>Rotina ajustada ao tempo dele</li>
-      <li>Do jeito leve, com acolhimento</li>
+      <li>De um jeito leve, com acolhimento</li>
       <li>O bebê aprende a emendar os ciclos de sono sozinho, de maneira natural</li>
     </ul>
 
@@ -530,7 +505,8 @@ details.faq .a p{margin:0}
   <!-- ============ BLOCO 12: FAQ (igual ao da página do Dream Baby Pocket) ============ -->
   <article class="page t-lilac" data-bloco="12-faq" data-pg="15">
     <span class="kicker">Perguntas frequentes</span>
-    <h2 class="title">Ficou alguma <span class="em">dúvida?</span></h2>
+    <h2 class="title">Ficou alguma dúvida?</h2>
+    <div class="media"><div class="frame wide"><img class="top" src="assets/day-faq.webp" alt="Dayane Dos Anjos" loading="lazy"></div></div>
     <details class="faq"><summary>Quanto tempo leva pra ver o meu plano?</summary><div class="a"><p>Em cerca de 30 minutos você responde o quiz, descobre o perfil e já sai com o passo a passo na mão pra aplicar já na próxima soneca.</p></div></details>
     <details class="faq"><summary>O Dream Baby Pocket é indicado pra qual idade?</summary><div class="a"><p>Funciona pra bebês de 0 a 12 meses. E se você é gestante, dá pra já chegar preparada antes do bebê nascer.</p></div></details>
     <details class="faq"><summary>Por que é sem choro?</summary><div class="a"><p>O método trabalha de forma gradual e respeitosa, sem deixar o bebê chorar. A ideia é uma transição suave, no ritmo dele, pra que se sinta confortável e protegido no berço.</p></div></details>
@@ -545,9 +521,9 @@ details.faq .a p{margin:0}
 
   <!-- ============ BLOCO 13: CTA FINAL ============ -->
   <article class="page t-cream" data-bloco="13-cta-final" data-pg="16">
-    <h2 class="title">Você não precisa continuar tentando sozinha, <span class="em">eu posso te ajudar!!</span></h2>
-    <p class="lead">Você está fazendo um trabalho incrível, mesmo nos dias mais desafiadores. O Dream Baby Pocket foi feito pra resolver exatamente o que você acabou de reconhecer no seu bebê: ensinar ele a dormir no berço, de forma leve e acolhedora. <span data-combo>Se quiser, some o acompanhamento pelo WhatsApp por +R$97, ou leve o combo com desconto.</span></p>
+    <h2 class="title">Você não precisa continuar tentando sozinha, eu posso te ajudar!!</h2>
     <div class="media"><div class="frame wide"><img class="top" src="assets/day-final.webp" alt="Dayane Dos Anjos" loading="lazy"></div></div>
+    <p class="lead">Você está fazendo um trabalho incrível, mesmo nos dias mais desafiadores. O Dream Baby Pocket foi feito pra resolver exatamente o que você acabou de reconhecer no seu bebê: ensinar ele a dormir no berço, de forma leve e acolhedora.</p>
     <p><strong>Vamos juntas?</strong></p>
     <a class="buy big" href="#" data-checkout data-btn="bloco13-pocket">QUERO DREAM BABY POCKET · R$67</a>
     <a class="buy" href="#" data-checkout-combo data-combo data-btn="bloco13-combo">QUERO DREAM BABY POCKET + ACOMPANHAMENTO · R$147</a>
