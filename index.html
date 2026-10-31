@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>O que ninguém te contou sobre o sono do bebê no berço</title>
+<title>5-motivos-bebê-não-dorme-no-berço.pdf</title>
 <meta name="description" content="Conheça os 5 principais motivos que dificultam o sono do bebê no berço e o que fazer em cada um deles. Por Dayane Dos Anjos.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
-<meta name="theme-color" content="#14306b">
+<meta name="theme-color" content="#323336">
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,37 +52,66 @@ fbq('init', '2103631056813206');
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2199334337151314&ev=PageView&noscript=1"/></noscript>
 <style>
 :root{
-  --bg:#e4e9f4;
+  --backdrop1:#3c3d40; --backdrop2:#28292b;
   --sheet:#fdfcfa;
   --ink:#252a40; --muted:#6f7590;
   --night:#2c4a8c; --night-deep:#1b2f5e;
   --gold:#a8741c;
   --line:#e1e6f1;
-  --radius:14px;
-  --maxw:760px;
+  --radius:5px;
+  --maxw:820px;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
-  margin:0; color:var(--ink); background:var(--bg);
+  margin:0; color:var(--ink);
   font-family:"Nunito",system-ui,sans-serif; font-size:18px; line-height:1.62;
+  background:
+    radial-gradient(1200px 600px at 50% -12%, #4b4c4f 0%, transparent 58%),
+    linear-gradient(180deg,var(--backdrop1),var(--backdrop2));
+  background-attachment:fixed;
   -webkit-text-size-adjust:100%;
 }
-.progress{position:fixed; top:0; left:0; right:0; z-index:50; height:3px}
+/* ---------- barra tipo leitor de PDF ---------- */
+.bar{
+  position:sticky; top:0; z-index:50;
+  display:flex; align-items:center; justify-content:space-between; gap:12px;
+  padding:8px clamp(12px,4vw,22px);
+  background:#323336; color:#e8e8ea;
+  border-bottom:1px solid #1e1f21; box-shadow:0 2px 8px rgba(0,0,0,.35);
+}
+.bar .doc{display:flex; align-items:center; gap:9px; min-width:0}
+.bar .doc .pdf{display:inline-flex; align-items:center; font-size:9.5px; font-weight:800; letter-spacing:.6px; color:#fff; background:#e0483d; padding:3px 6px; border-radius:4px; flex:0 0 auto}
+.bar .doc .fname{font-size:13px; font-weight:600; color:#e8e8ea; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+.bar .tools{display:flex; align-items:center; gap:clamp(8px,3vw,16px); flex:0 0 auto}
+.bar .zoom{display:flex; align-items:center; gap:2px}
+.bar .zoom button{width:26px; height:26px; border:0; background:transparent; color:#c7c7ca; font-size:17px; border-radius:6px; cursor:pointer; line-height:1; display:flex; align-items:center; justify-content:center}
+.bar .zoom button:hover{background:#48494c; color:#fff}
+.bar .pg{display:inline-flex; align-items:center; gap:7px; font-size:12.5px; color:#c7c7ca; font-weight:600; white-space:nowrap; font-variant-numeric:tabular-nums}
+.bar .pg .box{background:#26272a; border:1px solid #46474a; border-radius:5px; padding:2px 8px; color:#fff}
+.progress{position:sticky; top:42px; z-index:49; height:3px}
 .progress > i{display:block; height:100%; width:0; background:linear-gradient(90deg,var(--night),#7d9ee0); transition:width .12s linear}
 
 /* ---------- blocos verticais ---------- */
-.viewer{padding:16px clamp(10px,3vw,26px) 48px}
+.viewer{padding:22px clamp(10px,3vw,26px) 60px}
 .page{
   position:relative;
-  max-width:var(--maxw); margin:0 auto 18px;
+  display:flex; flex-direction:column; justify-content:center;
+  max-width:var(--maxw); margin:0 auto 26px;
   background-color:var(--sheet);
   background-image:url("assets/lua.svg");
-  background-repeat:no-repeat; background-position:right -4px top -4px; background-size:130px;
+  background-repeat:no-repeat; background-position:right -4px top -4px; background-size:140px;
   border-radius:var(--radius);
   box-shadow:0 1px 0 rgba(0,0,0,.03), 0 18px 40px -26px rgba(30,45,90,.45);
-  padding:clamp(30px,6vw,60px) clamp(22px,6vw,64px);
+  padding:clamp(30px,6vw,68px) clamp(24px,6vw,72px) clamp(56px,7vw,80px);
+  min-height:1080px;
 }
+.page::after{content:""; position:absolute; left:0; right:0; bottom:0; height:4px; background:linear-gradient(180deg,transparent,rgba(40,60,110,.05)); border-radius:0 0 var(--radius) var(--radius)}
+.pnum{position:absolute; left:0; right:0; bottom:26px; text-align:center; font-size:12.5px; letter-spacing:.14em; color:#a9b0c3; font-weight:700}
+.pnum::before,.pnum::after{content:"·"; margin:0 8px; color:#c9cfdd}
+.kicker{align-self:flex-start}
+.buy,.offer,.bump,.author,.stats,.socials,.reassure{align-self:stretch}
+.reassure{align-self:center}
 .page.t-sky{--sheet:#eef3fb}
 .page.t-cream{--sheet:#fbf6ec}
 .page.t-lilac{--sheet:#f2effa}
@@ -194,7 +223,8 @@ details.faq .a p{margin:0}
 .socials .ig{color:#e1306c}.socials .yt{color:#ff0000}.socials .tk{color:#111}
 
 /* ---------- CAPA ---------- */
-.cover{background:linear-gradient(180deg,#14306b 0%,#0b1838 62%,#050a18 100%); color:#fff; overflow:hidden; text-align:center; padding:clamp(40px,7vw,64px) clamp(22px,7vw,56px)}
+.cover{background:linear-gradient(180deg,#14306b 0%,#0b1838 62%,#050a18 100%); color:#fff; overflow:hidden; text-align:center; padding:clamp(40px,7vw,70px) clamp(22px,7vw,58px)}
+.cover .pnum{color:rgba(255,255,255,.4)}
 .cov-orn{position:absolute; inset:0; width:100%; height:100%; pointer-events:none}
 .cover .inner{position:relative; z-index:2}
 .cov-title{margin:0 auto; max-width:16ch; font-weight:800; font-size:clamp(30px,7.6vw,46px); line-height:1.15; letter-spacing:-.3px; color:#fff; text-wrap:balance}
@@ -209,18 +239,26 @@ details.faq .a p{margin:0}
 
 @media (max-width:640px){
   body{font-size:16.5px}
-  .page{padding:32px 20px 36px}
+  .page{min-height:86vh; padding:34px 22px 60px}
+  .cover{min-height:92vh}
 }
 </style>
 </head>
 <body>
 
+<div class="bar">
+  <div class="doc"><span class="pdf">PDF</span><span class="fname">5-motivos-bebe-nao-dorme-no-berco.pdf</span></div>
+  <div class="tools">
+    <div class="zoom"><button id="zout" title="Diminuir zoom">−</button><button id="zin" title="Aumentar zoom">+</button></div>
+    <span class="pg">Página <span class="box"><b id="curpg">1</b> / 16</span></span>
+  </div>
+</div>
 <div class="progress"><i id="bar"></i></div>
 
 <main class="viewer">
 
   <!-- ============ CAPA ============ -->
-  <article class="page cover" data-bloco="capa">
+  <article class="page cover" data-bloco="capa" data-pg="1">
     <svg class="cov-orn" viewBox="0 0 420 760" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
       <circle cx="368" cy="66" r="132" fill="#fff" opacity="0.04"/>
       <path d="M372 24a24 24 0 1 0 18 38 20 20 0 1 1-18-38z" fill="#f3d79b" opacity="0.45"/>
@@ -241,28 +279,31 @@ details.faq .a p{margin:0}
         <span><b>Por Dayane Dos Anjos</b>Consultora de sono</span>
       </div>
     </div>
+    <div class="pnum">1</div>
   </article>
 
   <!-- ============ BLOCO 1: ABERTURA ============ -->
-  <article class="page t-sky" data-bloco="1-abertura">
+  <article class="page t-sky" data-bloco="1-abertura" data-pg="2">
     <p class="lead">Se o seu bebê só dorme no colo, briga contra o sono ou tem muitos despertares durante a noite, ele está precisando de ajuda para encontrar o caminho do sono. E isso não é falta de jeito sua.</p>
     <p>Seja muito bem-vinda a este e-book, criado com muito carinho para te ajudar a entender por que o seu bebê não está dormindo bem no berço e, principalmente, <strong>como mudar isso de forma gentil e eficaz.</strong></p>
     <p>Depois de acompanhar milhares de famílias, percebi que existem 5 motivos principais que dificultam o sono do bebê no berço. Esse material foi criado para te ajudar a identificar se algum desses está acontecendo por aí, e o que você pode fazer para melhorar.</p>
     <p><em>Vamos começar? ↓</em></p>
+    <div class="pnum">2</div>
   </article>
 
   <!-- ============ BLOCO 2: MOTIVO 1 ============ -->
-  <article class="page t-cream" data-bloco="2-motivo1">
+  <article class="page t-cream" data-bloco="2-motivo1" data-pg="3">
     <div class="num">01</div>
     <span class="kicker">Motivo 1</span>
     <h2 class="title">Idade <span class="em">do bebê</span></h2>
     <p class="lead">Muita gente acredita que, com o tempo, o bebê vai começar a dormir melhor sozinho. Mas a verdade é que <strong>o sono é uma habilidade que se aprende.</strong> Todos nós, para adormecer, precisamos relaxar para encontrar o caminho do sono. Com o bebê não é diferente.</p>
     <div class="media"><div class="frame wide"><img class="top" src="assets/motivo1.webp" alt="Bebê deitado de barriga para cima" loading="lazy"></div></div>
     <p>O bebê aprende a dormir no berço quando a família ensina. Não depende de sorte, idade ou acaso. Quando ele aprende o caminho do sono, consegue emendar os ciclos de sono sozinho, de maneira natural, sem precisar da ajuda de um adulto a cada despertar. <strong>Isso transforma completamente a qualidade do sono do bebê e, por consequência, da família toda.</strong></p>
+    <div class="pnum">3</div>
   </article>
 
   <!-- ============ BLOCO 3: PRECISO ESPERAR? ============ -->
-  <article class="page t-lilac" data-bloco="3-esperar">
+  <article class="page t-lilac" data-bloco="3-esperar" data-pg="4">
     <h2 class="title">Preciso esperar meu bebê crescer para ensinar <span class="em">autonomia de sono?</span></h2>
     <p>Você já deve ter ouvido falar que é preciso esperar o bebê completar 4, 5 ou 6 meses para ensinar autonomia de sono, que não é possível ensinar antes disso.</p>
     <p>Isso acontece porque, para essas pessoas, o único caminho para ensinar o bebê a dormir no berço é deixá-lo chorando.</p>
@@ -270,10 +311,11 @@ details.faq .a p{margin:0}
     <div class="media"><div class="frame wide"><img class="top" src="assets/motivo4.webp" alt="Mãe com o bebê no colo no quarto" loading="lazy"></div></div>
     <p><strong>Esse não é o caminho em que eu acredito e que eu ensino.</strong></p>
     <p>Eu gosto de mostrar para as famílias como conduzir o bebê para a autonomia de sono, sem deixá-lo chorando, mas com presença e de forma suave.</p>
+    <div class="pnum">4</div>
   </article>
 
   <!-- ============ BLOCO 4: DESDE RECÉM-NASCIDO ============ -->
-  <article class="page t-sky" data-bloco="4-recem-nascido">
+  <article class="page t-sky" data-bloco="4-recem-nascido" data-pg="5">
     <h2 class="title">O bebê é capaz de aprender <span class="em">desde recém-nascido</span></h2>
     <p class="lead">Mesmo dormindo tranquilamente no colo dos pais, o bebê pode aprender a dormir no berço.</p>
     <p>Existe um passo a passo para isso, de forma gradual. O bebê vai aprendendo a dormir sem o contato físico dos pais, aos poucos, com muita presença e acolhimento. É tão suave que ele nem percebe que está passando por esse processo.</p>
@@ -282,10 +324,11 @@ details.faq .a p{margin:0}
     <p>É por isso que eu digo que <strong>um bebê, desde recém-nascido, pode dormir bem no berço.</strong></p>
     <p>Afinal, até poucos dias antes de nascer, o bebê já adormecia e emendava os ciclos de sono sozinho, ainda na barriga. Essa é uma habilidade que já vem com ele.</p>
     <p>A gente só precisa manter essa habilidade e adaptar o bebê ao berço. E, caso ele já esteja maior e tenha desaprendido, é possível retomar esse caminho de forma gradual e gentil.</p>
+    <div class="pnum">5</div>
   </article>
 
   <!-- ============ BLOCO 5: MOTIVO 2 ============ -->
-  <article class="page t-cream" data-bloco="5-motivo2">
+  <article class="page t-cream" data-bloco="5-motivo2" data-pg="6">
     <div class="num">02</div>
     <span class="kicker">Motivo 2</span>
     <h2 class="title">Bebê briga <span class="em">contra o sono</span></h2>
@@ -301,10 +344,11 @@ details.faq .a p{margin:0}
     <p>Para isso, é preciso organizar a rotina do seu bebê de acordo com as necessidades dele.</p>
     <p>Eu te mostro como fazer isso no link abaixo.</p>
     <a class="buy" href="#oferta" data-btn="bloco5-quero">QUERO</a>
+    <div class="pnum">6</div>
   </article>
 
   <!-- ============ BLOCO 6: MOTIVO 3 ============ -->
-  <article class="page t-mist" data-bloco="6-motivo3">
+  <article class="page t-mist" data-bloco="6-motivo3" data-pg="7">
     <div class="num">03</div>
     <span class="kicker">Motivo 3</span>
     <h2 class="title">Cólica, gases <span class="em">e disquesia</span></h2>
@@ -320,10 +364,11 @@ details.faq .a p{margin:0}
     <div class="note"><b>Gases, cólica e disquesia são comuns nessa fase,</b> mas não precisam ser um obstáculo permanente para o sono no berço.</div>
     <p>Se o bebê consegue relaxar e dormir no colo, podemos ajudá-lo a aprender a relaxar e dormir no berço também.</p>
     <p><em>Se o seu bebê só consegue relaxar e dormir no colo, no próximo tópico eu te explico por que isso acontece e como ajudá-lo a dormir bem no berço. ↓</em></p>
+    <div class="pnum">7</div>
   </article>
 
   <!-- ============ BLOCO 7: MOTIVO 4 (tela 1) ============ -->
-  <article class="page t-cream" data-bloco="7-motivo4">
+  <article class="page t-cream" data-bloco="7-motivo4" data-pg="8">
     <div class="num">04</div>
     <span class="kicker">Motivo 4</span>
     <h2 class="title">Bebê só aceita <span class="em">dormir no colo</span></h2>
@@ -338,10 +383,11 @@ details.faq .a p{margin:0}
     <p>Então, não se preocupe se seu bebê mama antes de adormecer.</p>
     <p>A questão não está em mamar, mas sim em ele não aceitar a transferência para o berço na sequência.</p>
     <p>Isso mostra que a dificuldade pode não estar relacionada ao peito, mas ao hábito de dormir apenas no colo.</p>
+    <div class="pnum">8</div>
   </article>
 
   <!-- ============ BLOCO 7: MOTIVO 4 (tela 2, o que fazer) ============ -->
-  <article class="page t-cream" data-bloco="7-motivo4-fazer">
+  <article class="page t-cream" data-bloco="7-motivo4-fazer" data-pg="9">
     <h3 class="sub" style="margin-top:0">O que fazer?</h3>
     <p>Neste caso, o bebê está acostumado a dormir coladinho no adulto, sentindo o cheiro, o calor e as batidas do coração.</p>
     <p>É algo muito fofo!</p>
@@ -354,10 +400,11 @@ details.faq .a p{margin:0}
     <p>É tão suave que o bebê aprende sem nem perceber. E logo vai parecer que ele sempre dormiu assim.</p>
     <p>Eu te mostro como fazer isso no link abaixo.</p>
     <a class="buy" href="#oferta" data-btn="bloco7-quero">QUERO</a>
+    <div class="pnum">9</div>
   </article>
 
   <!-- ============ BLOCO 8: MOTIVO 5 (tela 1) ============ -->
-  <article class="page t-lilac" data-bloco="8-motivo5">
+  <article class="page t-lilac" data-bloco="8-motivo5" data-pg="10">
     <div class="num">05</div>
     <span class="kicker">Motivo 5</span>
     <h2 class="title">Despertares <span class="em">noturnos</span></h2>
@@ -375,10 +422,11 @@ details.faq .a p{margin:0}
     <p>Por isso, acaba chamando um adulto.</p>
     <p>O bebê não faz isso porque quer. Com certeza, ele gostaria de voltar a dormir sem nem precisar despertar completamente.</p>
     <p>Mas, como ainda não conhece esse caminho, precisa da ajuda do adulto.</p>
+    <div class="pnum">10</div>
   </article>
 
   <!-- ============ BLOCO 8: MOTIVO 5 (tela 2, o que fazer) ============ -->
-  <article class="page t-lilac" data-bloco="8-motivo5-fazer">
+  <article class="page t-lilac" data-bloco="8-motivo5-fazer" data-pg="11">
     <h3 class="sub" style="margin-top:0">O que fazer?</h3>
     <p>Para resolver, é preciso ensinar o caminho do sono para o bebê, desenvolvendo nele a autonomia de sono.</p>
     <div class="note"><b>Autonomia de sono não é deixar o bebê chorando até que adormeça sozinho.</b> Autonomia de sono é a capacidade de adormecer e emendar os ciclos de sono de maneira natural.</div>
@@ -387,20 +435,22 @@ details.faq .a p{margin:0}
     <p>O processo pode ser tão suave que ele nem percebe que está aprendendo, sempre com muito carinho, presença e acolhimento dos pais.</p>
     <p>No botão abaixo eu te mostro o caminho.</p>
     <a class="buy" href="#oferta" data-btn="bloco8-quero">QUERO</a>
+    <div class="pnum">11</div>
   </article>
 
   <!-- ============ BLOCO 9: POR QUE ACONTECE ============ -->
-  <article class="page t-mist" data-bloco="9-por-que">
+  <article class="page t-mist" data-bloco="9-por-que" data-pg="12">
     <h2 class="title">Por que tudo <span class="em">isso acontece?</span></h2>
     <p class="lead">Se eu pudesse resumir, diria que os dois grandes fatores são: <strong>falta de rotina</strong> e <strong>associações negativas de sono.</strong></p>
     <p>Quando o bebê aprende a dormir de uma forma que não consegue repetir sozinho, ele depende de ajuda a cada vez que acorda. Isso gera cansaço, frustração e noites picadas.</p>
     <div class="note"><b>A boa notícia?</b> Isso pode mudar, e de forma muito mais leve do que você imagina!</div>
     <div class="quote">Agora você sabe os motivos, e eu posso te mostrar <em>o passo a passo para resolver isso.</em></div>
     <a class="buy" href="#oferta" data-btn="bloco9-passo-a-passo">QUERO O PASSO A PASSO</a>
+    <div class="pnum">12</div>
   </article>
 
   <!-- ============ BLOCO 10: TRANSIÇÃO + OFERTA ============ -->
-  <article class="page t-sky" id="oferta" data-bloco="10-oferta">
+  <article class="page t-sky" id="oferta" data-bloco="10-oferta" data-pg="13">
     <h2 class="title">É hora de <span class="em">mudar a estratégia</span></h2>
     <p class="lead">Agora que você entende o que pode estar por trás das noites mal dormidas, é hora de mudar a estratégia.</p>
     <p>Com amor, paciência e orientação, você pode ensinar o seu bebê a dormir bem no berço, <strong>sem choro, sem traumas e no tempo dele.</strong> E eu posso te ajudar com isso.</p>
@@ -457,10 +507,11 @@ details.faq .a p{margin:0}
         <a class="buy" href="#" data-checkout-combo data-btn="bloco10-combo">QUERO!!</a>
       </div>
     </div>
+    <div class="pnum">13</div>
   </article>
 
   <!-- ============ BLOCO 11: DAYANE ============ -->
-  <article class="page t-cream" data-bloco="11-dayane">
+  <article class="page t-cream" data-bloco="11-dayane" data-pg="14">
     <span class="kicker">Quem vai te ensinar</span>
     <div class="author">
       <img class="day-photo" src="assets/day-bio.webp" alt="Dayane Dos Anjos" loading="lazy">
@@ -473,10 +524,11 @@ details.faq .a p{margin:0}
       <div class="s"><span class="ic ic-ig"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 3.06A4.94 4.94 0 1 0 12 16.94 4.94 4.94 0 0 0 12 5.26zm0 8.14A3.2 3.2 0 1 1 12 8.8a3.2 3.2 0 0 1 0 6.4zm6.3-8.34a1.15 1.15 0 1 1-2.3 0 1.15 1.15 0 0 1 2.3 0z"/></svg></span><b>+642 mil</b><span class="lbl">seguidores</span></div>
       <div class="s"><span class="ic ic-tk"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.8a4.3 4.3 0 0 1-1-2.8h-3.1v12.3a2.4 2.4 0 1 1-2.4-2.4c.2 0 .5 0 .7.1V9.8a5.6 5.6 0 0 0-.7-.05A5.5 5.5 0 1 0 15.6 15.3V9.3a7.3 7.3 0 0 0 4.3 1.4V7.6a4.3 4.3 0 0 1-3.3-1.8z"/></svg></span><b>+660 mil</b><span class="lbl">seguidores</span></div>
     </div>
+    <div class="pnum">14</div>
   </article>
 
   <!-- ============ BLOCO 12: FAQ (igual ao da página do Dream Baby Pocket) ============ -->
-  <article class="page t-lilac" data-bloco="12-faq">
+  <article class="page t-lilac" data-bloco="12-faq" data-pg="15">
     <span class="kicker">Perguntas frequentes</span>
     <h2 class="title">Ficou alguma <span class="em">dúvida?</span></h2>
     <details class="faq"><summary>Quanto tempo leva pra ver o meu plano?</summary><div class="a"><p>Em cerca de 30 minutos você responde o quiz, descobre o perfil e já sai com o passo a passo na mão pra aplicar já na próxima soneca.</p></div></details>
@@ -488,10 +540,11 @@ details.faq .a p{margin:0}
     <details class="faq"><summary>Qual é a forma de pagamento?</summary><div class="a"><p>Cartão de crédito, Pix, PayPal ou Google Pay. No cartão você pode parcelar em até 12x. O pagamento é 100% seguro.</p></div></details>
     <details class="faq"><summary>Como funciona a garantia?</summary><div class="a"><p>Você tem 7 dias de garantia incondicional. Se por qualquer motivo não se adaptar, é só pedir o reembolso direto na Greenn dentro do prazo. Sem perguntas e sem burocracia.</p></div></details>
     <details class="faq"><summary>Como vou acessar o curso?</summary><div class="a"><p>Após a confirmação do pagamento, o acesso chega no seu e-mail. O conteúdo fica disponível por 12 meses na plataforma.</p></div></details>
+    <div class="pnum">15</div>
   </article>
 
   <!-- ============ BLOCO 13: CTA FINAL ============ -->
-  <article class="page t-cream" data-bloco="13-cta-final">
+  <article class="page t-cream" data-bloco="13-cta-final" data-pg="16">
     <h2 class="title">Você não precisa continuar tentando sozinha, <span class="em">eu posso te ajudar!!</span></h2>
     <p class="lead">Você está fazendo um trabalho incrível, mesmo nos dias mais desafiadores. O Dream Baby Pocket foi feito pra resolver exatamente o que você acabou de reconhecer no seu bebê: ensinar ele a dormir no berço, de forma leve e acolhedora. <span data-combo>Se quiser, some o acompanhamento pelo WhatsApp por +R$97, ou leve o combo com desconto.</span></p>
     <div class="media"><div class="frame wide"><img class="top" src="assets/day-final.webp" alt="Dayane Dos Anjos" loading="lazy"></div></div>
@@ -505,6 +558,7 @@ details.faq .a p{margin:0}
       <a href="https://www.youtube.com/manualdorecemnascido" target="_blank" rel="noopener"><span class="yt"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 12s0-3.2-.4-4.7a2.5 2.5 0 0 0-1.73-1.73C19.4 5.2 12 5.2 12 5.2s-7.4 0-8.87.37A2.5 2.5 0 0 0 1.4 7.3C1 8.8 1 12 1 12s0 3.2.4 4.7a2.5 2.5 0 0 0 1.73 1.73c1.47.37 8.87.37 8.87.37s7.4 0 8.87-.37A2.5 2.5 0 0 0 22.6 16.7C23 15.2 23 12 23 12zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg></span>YouTube</a>
       <a href="https://www.tiktok.com/@manualdorecemnascido" target="_blank" rel="noopener"><span class="tk"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.8a4.3 4.3 0 0 1-1-2.8h-3.1v12.3a2.4 2.4 0 1 1-2.4-2.4c.2 0 .5 0 .7.1V9.8a5.6 5.6 0 0 0-.7-.05A5.5 5.5 0 1 0 15.6 15.3V9.3a7.3 7.3 0 0 0 4.3 1.4V7.6a4.3 4.3 0 0 1-3.3-1.8z"/></svg></span>TikTok</a>
     </div>
+    <div class="pnum">16</div>
   </article>
 
 </main>
@@ -512,7 +566,7 @@ details.faq .a p{margin:0}
 <script>
 // modo captura (só p/ screenshot: ?shot=<data-bloco> isola um bloco)
 (function(){var s=new URLSearchParams(location.search).get('shot');if(!s)return;
-document.querySelectorAll('.page').forEach(function(p){if(p.dataset.bloco!==s)p.style.display='none';});})();
+document.querySelectorAll('.page').forEach(function(p){if(p.dataset.bloco!==s&&p.dataset.pg!==s)p.style.display='none';else p.style.minHeight='auto';});})();
 
 // ---- checkout Greenn ----
 // Pocket avulso R$67 (oferta AXqJQg, a mesma do dbpocket) com os order bumps do dbpocket.
@@ -572,6 +626,15 @@ document.querySelectorAll('[data-btn]').forEach(function(a){
   document.querySelectorAll('.page[data-bloco]').forEach(function(p){io.observe(p)});
 })();
 
+// indicador de página (sensação de leitor de PDF)
+var cur=document.getElementById('curpg');
+var iopg=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)cur.textContent=e.target.dataset.pg;});},{rootMargin:"-45% 0px -45% 0px",threshold:0});
+document.querySelectorAll('.page').forEach(function(p){iopg.observe(p)});
+// zoom: ajusta a largura das folhas
+var W=820, zin=document.getElementById('zin'), zout=document.getElementById('zout');
+function setW(){document.documentElement.style.setProperty('--maxw',W+'px')}
+zin&&zin.addEventListener('click',function(){W=Math.min(1000,W+80);setW()});
+zout&&zout.addEventListener('click',function(){W=Math.max(560,W-80);setW()});
 // barra de progresso
 var bar=document.getElementById('bar');
 function prog(){var h=document.documentElement, sc=h.scrollTop||document.body.scrollTop, max=h.scrollHeight-h.clientHeight; bar.style.width=(max>0?(sc/max*100):0)+"%";}
